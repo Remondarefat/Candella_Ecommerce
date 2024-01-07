@@ -1,3 +1,46 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.slider{
+    height: 50vh;
+    position: relative;
+}
+.slider img{
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition:opacity .5s;
+}
+.slider img.active{
+    opacity: 1;
+}
+.next,
+.prev{
+    color: #fff;
+    font-size: 3rem;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    z-index: 1;
+    text-decoration: none;
+    color: #272727;
+}
+.next{
+    right: 1rem;
+}
+.prev{
+    left: 1rem;
+}
+
+
+
 :root{
     --main-color:#EDCBA8;
     --second-color:#EDCBA6;
