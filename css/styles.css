@@ -49,3 +49,89 @@
     --navbar-bg-color:#272727;
     --nav-tabs-bg-color:#E0E0E0;
 }
+
+/* START--  sign up & contact style  */
+.contact-first-block{
+    padding: 20px;
+}
+
+.contact-first-block input {
+    margin-bottom: 15px;
+    
+}
+.signup-logo , .contact-logo {
+    width: 35px;
+    align-self: flex-start;
+}
+.signup-image  {
+    width: -webkit-fill-available;
+    object-fit: cover;
+    object-position: 15% 1%;
+    height: 100vh;
+    max-width: 100%;
+
+}
+.signup-image {
+    zoom:200%;
+}
+
+.redirect-anchor{
+    color: #B08A42;
+}
+  #signup-heading, .redirect-anchor:hover{
+    color: #272727;
+}
+.signup-btn {
+    padding: 6px 25px;
+    background-color: #B08A42;
+    border-color: #B08A42;
+    border-radius: 7px;
+    border-color: transparent;
+    color: #fff;
+    width: 150px;
+}
+.signup-btn:hover , .contact-btn:hover {
+    background-color: #272727;
+    color: #fff;
+}
+.signup-image-container {
+    height: 100vh;
+    overflow: hidden;
+}
+.signup-validation {
+    color: red;
+    margin: 5px 0;
+}
+#password_validation {
+   
+    width: 400px;
+}
+.password-container {
+    position: relative;
+}
+
+.toggle-password {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+.contact-image{
+    width: -webkit-fill-available;
+    object-fit: cover;
+    object-position: 80% 1%;
+    height: 100vh;
+    max-width: 100%;
+}
+.contact-textarea{
+    height: 100px;
+}
+.contact-btn {
+    margin-top: 32px;
+    width: 137px;
+    background-color: #B08A42;
+    border-color:transparent;
+}
+
+/* END--    sign up and contact style */
