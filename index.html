@@ -1,25 +1,132 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Candela</title>
     <!-- TODO:-------------------START google fonts----------------- -->
 
     <!-- TODO:-------------------END google fonts------------------- -->
 
     <!-- TODO:-------------------START CSS Links----------------------->
     <link rel="stylesheet" href="css/all.min.css">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
     <!-- TODO:-------------------END CSS Links------------------------ -->
 </head>
-<body>
-    
 
+<body>
+    <nav class="navbar fixed-top navbar-expand-lg shadow p-3 mb-5 bg-body-tertiary rounded">
+        <div class="container-fluid d-flex align-items-center h-100 ">
+            <a class="navbar-brand ms-5" href="index.html">
+                <img src="imgs/logo.svg" class="logo" alt="logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse rounded-5 pt-2 toggle-menu" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto d-flex align-items-center ms-auto ">
+                    <li>
+                        <form class="" role="search">
+                            <input class="form-control-search mx-auto " type="search" placeholder="Search"
+                                aria-label="Search">
+                            <i class="fa-solid fa-magnifying-glass search-sign"></i>
+                        </form>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="signup.html"><i class="fa-solid fa-user"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link d-none" href="#"><i class="fa-solid fa-right-from-bracket"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+
+    <ul class="nav nav-tabs justify-content-center catogories">
+        <li class="nav-item ">
+            <a class="nav-link category active" id="all" data-category="" aria-current="page" href="#">All</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link category" data-category="category/smartphones" href="#">Smartphones</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link category" data-category="category/laptops" href="#">Laptops</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link category" data-category="category/fragrances" href="#">Fragrances</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link category" data-category="category/skincare" href="#">Skincare</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link category" data-category="category/groceries" href="#">Groceries</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link category" data-category="category/home-decoration" href="#">Home-Decoration</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link category" data-category="category/furniture" href="#">Furniture</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link category" data-category="category/tops" href="#">Tops</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link category" data-category="category/womens-dresses" href="#">Women-Dresses</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link category" data-category="category/womens-shoes" href="#">Women-Shoes</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link category" data-category="category/mens-shirts" href="#">Men-Shirts</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link category" data-category="category/mens-shoes" href="#">Men-Shoes</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link category" data-category="category/mens-watches" href="#">Men-Watches</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link category" data-category="category/womens-bags" href="#">Women-Bags</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link category" data-category="category/womens-jewellery" href="#">Women-Jewellery</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link category" data-category="category/sunglasses" href="#">Sunglasses</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link category" data-category="category/automotive" href="#">Automotive</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link category" data-category="category/motorcycle" href="#">Motorcycle</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link category" data-category="category/lighting" href="#">Lighting</a>
+        </li>
+
+    </ul>
+    <div class="container d-flex justify-content-center">
+        <div class="row mt-4 w-100" id="rowData">
+        </div>
+    </div>
+    <button class="top-button " onclick="scrollToTop()">Top</button>
+
+
+
+    </div>
     <!-- TODO:-------------------JS Links------------------>
-    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/main.js"></script>
     <!-- TODO:-------------------END JS Links---------------- -->
 </body>
+
 </html>
