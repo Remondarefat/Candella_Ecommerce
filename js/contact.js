@@ -5,10 +5,19 @@ function submitForm() {
     var contactLname = document.getElementById("contact-lname").value;
     var contactEmail = document.getElementById("contact-email").value;
     var contactMessage = document.getElementById("contact-textarea").value;
+
     if (!contactFname || !contactLname || !contactEmail || !contactMessage) {
-        alert("Please fill in all required fields.");
+        console.log('false');
         return false;
     }
-    alert("Your message has been sent successfully.");
+
+    console.log("Your message has been sent successfully.");
+    window.location.href = "../index.html";
+    
+    // Optionally prevent the default form submission behavior
+    event.preventDefault();
+
+    return true;
 }
+
 // END -- contact required fields validation
