@@ -38,7 +38,11 @@ function signup() {
         emailValidation.textContent = "*Please enter a valid email address.";
         return false;
     }
-
+    // Check if email already exists
+    if(users.some((user) => user.email === emailInput.value)){
+        emailValidation.textContent = "*Email already exists";
+        return false;
+    }
     //Validate password
     if (!validatePassword(passwordInput.value)) {
         passwordValidation.textContent = "*Password must be at least 8 characters, contains at least one number, capital and small letters";
