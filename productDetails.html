@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Candela</title>
+    <title>Candela | Product_details</title>
     <!-- TODO:-------------------START google fonts----------------- -->
 
     <!-- TODO:-------------------END google fonts------------------- -->
@@ -11,12 +11,80 @@
     <!-- TODO:-------------------START CSS Links----------------------->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/all.min.css">
     <!-- TODO:-------------------END CSS Links------------------------ -->
 </head>
 <body>
+    <section id="home" class="w-100 d-flex  flex-column justify-content-around">
+        <section id="product-details" class="d-flex align-items-center justify-content-center w-100 ">
+            <div class="container ">
+                <div class="row ">
+                    <div class="col-md-6">
+                        <div class="  m-0  d-flex justify-content-center h-100">
+                            <img id="imgPro" src="images/home-img.jpg" class="rounded-5 w-75" alt="">
+                        </div>
+                    </div>
+                    <div class="col-md-6 py-4 ">
+                        <div class="  w-100 m-0 h-100 d-flex flex-column justify-content-between">
+                           <h3 id="title">blouse</h3>
+                           <p class="lead bg">Lorem ipsum dolor boxt amet consectetur adipiboxcing elit. Dolorum, eum.</p>
+                           <div>
+                            <div class="container px-4">
+                                <h5 class="fa-1x colBT">Quantity</h5>
+                                <div class="w-100 d-flex align-items-center justify-content-between">
+                                    <p class="border border-black py-1 px-4"><span id="plus" class="colBT">+</span><span id="count" class="ms-2 text-black ">1</span> <span id="min" class="ms-2 colBT fw-bolder">-</span></p>
+                                    <div><h2 class="d-inline colBT">$ </h2><h2 id="sal" class="d-inline colBT"> 9.99</h2></div>
+                                </div>
+                            </div>
+                            <div class="d-flex flex-column justify-content-center">
+                                
+                            </div>
+                            <button id="add" class="bgcolBT text-white w-100 mx-auto px-5 py-2 border-0 rounded-2 d-flex justify-content-center align-items-center">
+                                <i class="fa-solid fa-cart-shopping"></i>
+                                <h5 class="">+ Add to cart</h5>
+                            </button>
+                           </div>
+                        </div>
+                    </div>
+                </div>
+                
+        
+            </div>
+        </section>
+        <section id="similar-items" class=" ">
+            <div class="container py-4 ">
+                <h5 class="colBT title py-2 fw-bolder">Similar items</h5>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="text-center box shadow rounded-4 ms-auto">
+                            <img src="images/pexels-evg-kowalievska-1126993.jpg" class="box-image " alt="">
+                            <h5 class="w-50">t-shirt</h5>
+                            <h5 class="w-50 ms-auto pb-2">9.99</h5>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="text-center box shadow rounded-4 ms-auto">
+                            <img src="images/home-img.jpg" class="box-image " alt="">
+                            <h5 class="w-50">blouse</h5>
+                            <h5 class="w-50 ms-auto pb-2">9.99</h5>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="text-center box shadow rounded-4 ms-auto">
+                            <img src="images/contact.jpg" class="box-image  " alt="">
+                            <h5 class="w-50">Hat</h5>
+                            <h5 class="w-50 ms-auto pb-2">9.99</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+  
+    
     <!-- TODO:-------------------JS Links------------------>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="js/main.js"></script>
+    <script src="js/details.js"></script>
     <!-- TODO:-------------------END JS Links---------------- -->
 </body>
 </html>

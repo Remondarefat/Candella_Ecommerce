@@ -4,6 +4,9 @@
   let nbr_img = img_slider.length;
   let prev = document.querySelector('.prev');
   let next = document.querySelector('.next');
+  // moataz code
+
+  
   
   function deleteActiveImages(){
       for(let i = 0 ; i < nbr_img ; i++){
@@ -41,13 +44,13 @@
 
   var allItems = [];
 
-  (function () {
+(function () {
+     
     async function getProducts(category) {
       var res = await fetch(`https://dummyjson.com/products/${category}`);
       var data = await res.json();
       var productsArray = data.products;
       allItems = productsArray;
-      console.log(productsArray);
       displayProduct(allItems);
     }
   
@@ -66,19 +69,31 @@
       for (var i = 0; i < allItems.length; i++) {
         container += `
           <div  class=" col-md-3 card ">
-            <img class="w-25" src="${allItems[i].thumbnail}"/>
+            <img class="w-25 product_box_img" src="${allItems[i].thumbnail}"/>
             <div class="col-md-8">
             <div class="item">
                 <h2>${allItems[i].title}</h2>
                 <p>${allItems[i].price} $</p>
                 <p class="d-none">${allItems[i].category}</p>
                 
+                
             </div>
             </div>
             </div>`;
       }
       document.getElementById("rowData").innerHTML = container;
-    }
+      let card = document.querySelectorAll(".card");
+      for (let i = 0; card.length; i++){
+        card[i].addEventListener("click", function (e) {
+          console.log(e.target.querySelector(".product_box_img").getAttribute("src"));
+        })
+      }
+
+      
+      
+  }
+
+  // end moataz codee
   
     var links = document.querySelectorAll(".category");
   
@@ -110,3 +125,6 @@
   
     window.addEventListener("scroll", toggleButton);
   })();
+(function () {
+ 
+})();
