@@ -72,20 +72,36 @@
             <img class="w-25 product_box_img" src="${allItems[i].thumbnail}"/>
             <div class="col-md-8">
             <div class="item">
-                <h2>${allItems[i].title}</h2>
-                <p>${allItems[i].price} $</p>
+                <h2 class="title">${allItems[i].title}</h2>
+                <p class="product_salary">${allItems[i].price} $</p>
                 <p class="d-none">${allItems[i].category}</p>
-                
+                <p class="d-none describtion">${allItems[i].description}</p>
+
                 
             </div>
             </div>
             </div>`;
       }
       document.getElementById("rowData").innerHTML = container;
-      let card = document.querySelectorAll(".card");
+      let card = document.querySelectorAll(".product_box_img");
       for (let i = 0; card.length; i++){
         card[i].addEventListener("click", function (e) {
-          console.log(e.target.querySelector(".product_box_img").getAttribute("src"));
+          console.log(e.target.nextElementSibling.querySelector(".describtion").innerHTML);
+          let img_src = e.target.getAttribute("src");
+          let title = e.target.nextElementSibling.querySelector(".title").innerHTML;
+          let describtion = e.target.nextElementSibling.querySelector(".describtion").innerHTML;
+          let product_salary = e.target.nextElementSibling.querySelector(".product_salary").innerHTML;
+          let final_sal = parseFloat(product_salary)
+          console.log(final_sal);
+          let obj = {
+            img: img_src,
+            tit: title,
+            desc: describtion,
+            sal:final_sal
+          }
+          localStorage.setItem("product",JSON.stringify(obj))
+          console.log(obj);
+          location.assign("../productDetails.html")
         })
       }
 

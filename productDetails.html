@@ -15,25 +15,59 @@
     <!-- TODO:-------------------END CSS Links------------------------ -->
 </head>
 <body>
-    <section id="home" class="w-100 d-flex  flex-column justify-content-around">
+    <div class="container-fluid p-0">
+        <nav class="navbar fixed-top navbar-expand-lg shadow bg-body-tertiary rounded">
+            <div class="container-fluid d-flex align-items-center h-100 ">
+                <a class="navbar-brand d-flex justify-content-center align-items-center ms-5" href="index.html">
+                    <img src="images/logo.svg" class="logo" alt="logo">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse rounded-5 pt-2 toggle-menu" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto d-flex align-items-center ms-auto ">
+                        <li>
+                            <form class="search-form" role="search">
+                                <input class="form-control-search mx-auto " type="search" placeholder="Search"
+                                    aria-label="Search">
+                                <i class="fa-solid fa-magnifying-glass search-sign"></i>
+                            </form>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="signup.html"><i class="fa-solid fa-user"></i></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link d-none" href="#"><i class="fa-solid fa-right-from-bracket"></i></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
+                        </li>
+                    </ul>
+    
+                </div>
+            </div>
+        </nav>
+    <section id="home" class="w-100 d-flex  flex-column justify-content-around mt-5">
         <section id="product-details" class="d-flex align-items-center justify-content-center w-100 ">
             <div class="container ">
                 <div class="row ">
                     <div class="col-md-6">
                         <div class="  m-0  d-flex justify-content-center h-100">
-                            <img id="imgPro" src="images/home-img.jpg" class="rounded-5 w-75" alt="">
+                            <img id="imgPro" src="https://cdn.dummyjson.com/product-images/9/thumbnail.jpg" class="rounded-5 w-50" alt="">
                         </div>
                     </div>
                     <div class="col-md-6 py-4 ">
                         <div class="  w-100 m-0 h-100 d-flex flex-column justify-content-between">
-                           <h3 id="title">blouse</h3>
-                           <p class="lead bg">Lorem ipsum dolor boxt amet consectetur adipiboxcing elit. Dolorum, eum.</p>
+                           <h3 id="title"></h3>
+                           <p class="descc lead bg"></p>
                            <div>
                             <div class="container px-4">
                                 <h5 class="fa-1x colBT">Quantity</h5>
                                 <div class="w-100 d-flex align-items-center justify-content-between">
                                     <p class="border border-black py-1 px-4"><span id="plus" class="colBT">+</span><span id="count" class="ms-2 text-black ">1</span> <span id="min" class="ms-2 colBT fw-bolder">-</span></p>
-                                    <div><h2 class="d-inline colBT">$ </h2><h2 id="sal" class="d-inline colBT"> 9.99</h2></div>
+                                    <div><h2 class="d-inline colBT">$ </h2><h2 id="sal" class="d-inline colBT"> </h2></div>
                                 </div>
                             </div>
                             <div class="d-flex flex-column justify-content-center">
