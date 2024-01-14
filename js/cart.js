@@ -18,7 +18,7 @@ var cartItems = JSON.parse(localStorage.getItem("card_to_product")) || [];
 
 function displayCartItems() {
     var container = document.querySelector(".container");
-    container.innerHTML = ""; // Clear the container before displaying items
+    container.innerHTML = ""; 
 
     for (var i = 0; i < cartItems.length; i++) {
         var product = cartItems[i];
@@ -64,14 +64,12 @@ function displayCartItems() {
         container.appendChild(cartItemDiv);
     }
 
-    // Update the total cart price after displaying all items
     updateTotalCartPrice();
 }
 
 function updateQuantity(index, action) {
     var product = cartItems[index];
 
-    // Convert Quantity to a numeric type
     product.Quantity = parseInt(product.Quantity);
 
     if (isNaN(product.Quantity)) {
@@ -86,10 +84,8 @@ function updateQuantity(index, action) {
         product.Quantity--;
     }
 
-    // Update the local storage with the modified cart items
     localStorage.setItem("card_to_product", JSON.stringify(cartItems));
 
-    // Display the updated cart items
     displayCartItems();
 }
 
@@ -111,7 +107,6 @@ function updateTotalCartPrice() {
         return total;
     }, 0).toFixed(2);
 
-    // Update all instances of totalCartPrice with the calculated value
     totalCartPriceElements.forEach(element => {
         element.textContent = totalCartPrice + ' $';
     });
@@ -119,7 +114,6 @@ function updateTotalCartPrice() {
 
 
 function checkout() {
-    // Store cart items with numeric values as integers
     var numericCartItems = cartItems.map(item => ({
         ...item,
         Quantity: parseInt(item.Quantity),
@@ -127,10 +121,8 @@ function checkout() {
         TotalPrice: parseFloat(item.Salary * item.Quantity)
     }));
 
-    // Calculate the total cart price
     var totalCartPrice = numericCartItems.reduce((total, item) => total + item.TotalPrice, 0).toFixed(2);
 
-    // Save the cart items and total cart price in local storage
     var checkoutData = {
         items: numericCartItems,
         totalCartPrice: totalCartPrice
@@ -138,14 +130,9 @@ function checkout() {
 
     localStorage.setItem("checkout_cart", JSON.stringify(checkoutData));
 
-    // Optional: Clear the current cart items after checkout
     localStorage.removeItem("card_to_product");
 
-    // Notify the user or redirect to the checkout page
     // alert("Checkout successful!");
 }
 
-
-
-// Call the function to display cart items when the page loads
 displayCartItems();
