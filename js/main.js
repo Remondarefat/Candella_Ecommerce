@@ -74,7 +74,7 @@
             <div class="item">
                 <h2 class="title">${allItems[i].title}</h2>
                 <p class="product_salary">${allItems[i].price} $</p>
-                <p class="d-none">${allItems[i].category}</p>
+                <p class="d-none product_category">${allItems[i].category}</p>
                 <p class="d-none describtion">${allItems[i].description}</p>
 
                 
@@ -86,13 +86,31 @@
       let card = document.querySelectorAll(".product_box_img");
       for (let i = 0; card.length; i++){
         card[i].addEventListener("click", function (e) {
-          console.log(e.target.nextElementSibling.querySelector(".describtion").innerHTML);
+          let cat=e.target.nextElementSibling.querySelector(".product_category").innerHTML;
+          console.log(allItems);
+          let sim_item_arr = [];
+          for (let i = 0; i < allItems.length; i++) {
+            if (allItems[i].category==cat) {
+              let im = allItems[i].thumbnail;
+              let ti = allItems[i].title;
+              let pri = allItems[i].price;
+              let des = allItems[i].description;
+              let sim_item_obj = {
+                img: im,
+                title: ti,
+                price: pri,
+                describtion:des
+              }
+              sim_item_arr.push(sim_item_obj); 
+            }
+          }
+          
+          localStorage.setItem("similer_item", JSON.stringify(sim_item_arr));
           let img_src = e.target.getAttribute("src");
           let title = e.target.nextElementSibling.querySelector(".title").innerHTML;
           let describtion = e.target.nextElementSibling.querySelector(".describtion").innerHTML;
           let product_salary = e.target.nextElementSibling.querySelector(".product_salary").innerHTML;
           let final_sal = parseFloat(product_salary)
-          console.log(final_sal);
           let obj = {
             img: img_src,
             tit: title,
@@ -100,7 +118,6 @@
             sal:final_sal
           }
           localStorage.setItem("product",JSON.stringify(obj))
-          console.log(obj);
           location.assign("../productDetails.html")
         })
       }

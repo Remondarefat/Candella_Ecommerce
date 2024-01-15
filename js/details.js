@@ -7,31 +7,75 @@
     let title = document.querySelector("#title");
     let descc = document.querySelector(".descc");
     let imgPro = document.querySelector("#imgPro");
-    let box = document.querySelectorAll(".box");
+    let similer_box = document.querySelector(".similer_box");
+    let bt_more = document.querySelector(".bt-more");
     let product_object = JSON.parse(localStorage.getItem("product"));
     imgPro.setAttribute("src",product_object.img)
     title.innerHTML=product_object.tit;
     descc.innerHTML=product_object.desc;
     sal.innerHTML = product_object.sal;
     let parseSal = parseInt(sal.textContent);
-    console.log(parseSal);
     let finalSal = parseSal;
     let x = 1;
     let arr = [];
-    // let img_src = e.target.getAttribute("src");
-    // let tit = e.target.nextElementSibling.querySelector(".title").innerHTML;
-    // let describtion = e.target.nextElementSibling.querySelector(".describtion").innerHTML;
-    
+    let similer_item = JSON.parse(localStorage.getItem("similer_item"));
+    let cartona = "";
+    for (let i = 0; i < 3; i++){
+        cartona += `
+        <div class="col-md-4">
+                        <div class="text-center box shadow rounded-4 ms-auto">
+                            <img src="${similer_item[i].img}" class="box-image " alt="">
+                            <h5 class="w-100 similer-t fa-1x">${similer_item[i].title}</h5>
+                            <h5 class="colBT w-50 ms-auto pb-2 similer-pt"><p class="d-inline similer-p">${similer_item[i].price}</p> $</h5>
+                            <h5 class="colBT w-50 similer-d ms-auto pb-2 d-none">${similer_item[i].describtion} $</h5>
+                        </div>
+                    </div>
+        `;
+    }
+    for (let i = 3; i < similer_item.length; i++){
+        cartona += `
+        <div class="col-md-4 addition-item mt-5">
+                        <div class="text-center box shadow rounded-4 ms-auto">
+                            <img src="${similer_item[i].img}" class="box-image " alt="">
+                            <h5 class="w-100 similer-t fa-1x">${similer_item[i].title}</h5>
+                            <h5 class="colBT w-50 ms-auto pb-2 similer-pt"><p class="d-inline similer-p">${similer_item[i].price}</p> $</h5>
+                            <h5 class="colBT w-50 similer-d ms-auto pb-2 d-none">${similer_item[i].describtion} $</h5>
+                        </div>
+                    </div>
+        `;
+    }
+    similer_box.innerHTML = cartona;
+    $(".bt-more").on("click", function () {
+        $(".addition-item").slideToggle(1000);
+        if (bt_more.innerHTML == "More") {
+            bt_more.textContent = "Less";
+            console.log('helloo');
+        }
+        else {
+            bt_more.innerHTML = "More"
+        }
+    })
+    let box = document.querySelectorAll(".box");
     for (let i = 0; i < box.length; i++){
         box[i].addEventListener("click", function (evntInfo) {
             let div = evntInfo.target.parentElement;
             let img = imgPro.getAttribute("src");
             let ti = title.textContent;
+            let dec = evntInfo.target.parentElement.querySelector(".similer-d");
+            let pri = evntInfo.target.parentElement.querySelector(".similer-p");
+            console.log(pri);
+            // let ti = title.textContent;
             imgPro.setAttribute("src", div.children[0].getAttribute("src"));
             title.innerHTML = div.children[1].textContent;
-            console.log(imgPro.getAttribute("src"));
+            descc.innerHTML = dec.innerHTML;
+            sal.innerHTML = pri.innerHTML;
+            console.log(pri.innerHTML);
+            parseSal = parseInt(sal.textContent);
+            finalSal = parseSal;
             div.children[0].setAttribute("src",img) ;
             div.children[1].innerHTML = ti;
+            x=1
+            count.innerHTML = x;
         })
     }
     plus.addEventListener("click", function () {
