@@ -149,7 +149,6 @@ html{
 
 /* END--    sign up and contact style */
 
-
 .logo{
     width:40px;
 }
@@ -432,3 +431,227 @@ ul{
     cursor: pointer;
 }
 /* End--    Product Details style */
+
+
+
+
+
+
+
+/*      ------------------------------- Footer -----------------------------------                  */
+
+.footer {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #272727;
+    padding: 10px;
+    text-align: center;
+    /* height: 500px; */
+    }
+    .separator{
+    margin-top: 50px;
+    margin-bottom: 30px;
+    
+    }
+    .logoSection {
+    display: flex;
+    /* align-items: center; */
+    justify-content: space-between; 
+    }
+    
+    .logoSec {
+        display: flex;
+        /* align-items: center; */
+        justify-content: space-between; 
+        margin-left: 10%;
+        }
+    .logoFooter {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+    }
+    
+    .logoDesc {
+    font-size: 20px;
+    color: #fff;
+    }
+    .aboutFooter{
+        margin-right: 50px;
+        padding: 20px 20px;
+        position: relative;
+    }
+    
+    
+    .aboutFooter,
+    .contactFooter {
+    color: #B08A42;
+    text-decoration: none; 
+    
+    }
+    .abo{
+        background-color: var(--bt-bg-color);
+        color: white;
+        width: fit-content;
+    }
+    .aboutFooter::before{
+    content: "";
+    width: 100%;
+    height: 70px;
+    background-color: var(--bt-bg-color);
+    position: absolute;
+    bottom: -90%;
+    left: 0;
+    display:none;
+    }
+    .contactAboutSection
+    {
+    margin-right: 10%;
+    }
+    
+    .aboutFooter:hover,
+    .contactFooter:hover {
+    color: #E0E0E0;}
+    
+    .copyrightParagraph{
+        color: #c0c0c0;
+    }
+    
+    .aboutDiv {
+        display: none; 
+        width: 80%;
+        background-color: #B08A42;
+        border-radius: 20px;
+        margin: 20px;
+        padding: 20px;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .aboutDiv a{
+        text-decoration: none;
+        color:#c3c2c2;
+    }
+    .aboutDiv a:hover{
+        color: #272727;
+    }
+    .aboutParagraph{
+    text-align: left;
+    }
+    
+    .aboutTeamImg{
+        width: 80px;
+        height: 80px;
+    }
+    .rem{
+        color: var(--bt-bg-color);
+        cursor: pointer;
+        text-decoration: none;
+    }
+    .quan{
+        border: 2px solid var(--bt-bg-color);
+        padding: 3px 15px;
+    }
+    .che{
+        background-color: var(--bt-bg-color);
+        color: white;
+        padding: 5px 50px;
+        cursor: pointer;
+        
+    }
+    .che:hover {
+        color: white;
+        background-color: #272727;
+    }
+    .minusItem:hover {
+        color:#272727;
+    }
+    .plusItem:hover{
+        color:#272727;
+
+    }
+
+    .aboutFooterDiv{
+    align-items: center;
+    justify-content: center;
+    }
+    .removeItem:hover{
+        color:#272727;
+    }
+    .gitIcon{
+        width: 20px;
+    }
+    
+    
+    /*      ------------------------------- End of Footer -----------------------------------                  */
+    
+/* !------------ Start Check Out & Login Style------- */
+/* ? Start Check Out Style */
+.checkOutInfo{
+    height: 100vh;
+}
+.toShop{
+    color:#B08A42;
+
+}
+#checkOut{
+    height: 100vh;
+}
+#creditCardInfo{
+    display: none;
+}
+.btn-1{
+    padding: 6px 25px;
+    background-color: #B08A42;
+    border-color: #B08A42;
+    border-radius: 7px;
+    border-color: transparent;
+    color: #fff;
+    width: 150px;
+    transition: 0.5s;
+}
+.btn-1:hover{
+    background-color: #272727;
+    color: #fff;
+    scale:1.1;
+}
+
+#checkOutValidation , #loginValidation ,#emailValidation ,#passwordValidation {
+    color: red;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+-webkit-appearance: none;
+margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+-moz-appearance: textfield;
+}
+/* ? End Check Out Style */
+
+/* ? Start Login Style */
+.login-Info{
+    padding:20px;
+}
+
+.trans{
+    transition: 0.4s all ease-out;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* !------------ End Check Out & Login Style------- */
