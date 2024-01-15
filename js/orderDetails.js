@@ -68,7 +68,7 @@ for(let i=0 ; i<checkout_cart.items.length;i++){
     <div class="col-6 mt-5 pe-0">
         <p class="text-start">product</p>
         <hr >
-        <div class="d-flex align">
+        <div class="d-flex ImageOrder ">
             <img src=${checkout_cart.items[i].imgSrc} class="rounded-3 w-50 itemImage" alt="">
             <div class="ms-5">
                 <h5 class="itemDesc">${checkout_cart.items[i].title}</h5>
