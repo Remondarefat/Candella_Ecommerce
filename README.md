@@ -34,7 +34,7 @@ Here are screenshots that show the Candella E-commerce application in use.
 ---
 
 **Item Detail Page**
-![Item Detail](/images/aboutdisc/Productdetails.png.png?raw=true "Optional Title")
+![Item Detail](/images/aboutdisc/Productdetails.png?raw=true "Optional Title")
 
 ---
 
