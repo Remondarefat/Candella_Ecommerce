@@ -19,8 +19,8 @@ let order={};
 for (var i = 0; i < paymentMethodInput.length; i++) {
   paymentMethodInput[i].addEventListener('change', function() {
       if (this.value =="CreditCard" ) {
-        creditCardInfo.className='d-block';  
-        // creditCardInfo.className='trans';  
+// !  drop down credit card inputs Used jQuery -------
+          $("#creditCardInfo").slideToggle();
 
           order = {
           payMentMethod:this.value,
@@ -28,7 +28,7 @@ for (var i = 0; i < paymentMethodInput.length; i++) {
         orderInfo.push(order);
         localStorage.setItem("order", JSON.stringify(orderInfo));
       }else{
-        creditCardInfo.className='d-none';  
+        $("#creditCardInfo").slideToggle();
         order={
           payMentMethod:this.value,
         };
@@ -37,6 +37,8 @@ for (var i = 0; i < paymentMethodInput.length; i++) {
       }
   });
   }
+
+
 
 // !--- function to submit order
 function orderSubmit() {

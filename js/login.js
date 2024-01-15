@@ -30,23 +30,26 @@ function checkInput() {
 // ! Login Validation 
 function checkValidation(){
   if(!emailInput || !passwordInput){
-    loginValidation.textContent="Please Fill All Required Inputs";
-    return false ;
+     loginValidation.textContent="Please Fill All Required Inputs";
+     return false ;
   }
   else {
-    let userFound = false;
-    for(let i = 0; i < usersContainer.length; i++){
-      if(emailInput.value == usersContainer[i].email && passwordInput.value == usersContainer[i].password){
-        userFound = true;
-        break;
-      }
-    }
-    if(!userFound){
-      emailValidation.textContent="Invalid Email";
-      passwordValidation.textContent="Invalid Password";
-    }
-    else {
-      return true ;
-    }
+     let userFound = false;
+     for(let i = 0; i < usersContainer.length; i++){
+       if(emailInput.value == usersContainer[i].email){
+         userFound = true;
+         if(passwordInput.value != usersContainer[i].password){
+           passwordValidation.textContent="Invalid Password";
+           return false;
+         }
+         break;
+       }
+     }
+     if(!userFound){
+       emailValidation.textContent="Invalid Email";
+     }
+     else {
+       return true ;
+     }
   }
-}
+ }

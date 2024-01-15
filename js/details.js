@@ -102,7 +102,7 @@
             Quantity: count.textContent,
             Salary: parseSal,
             Total: finalSal,
-            imgSrc:imgPro.getAttribute("src")
+            imgSrc:imgPro.getAttribute("src"),
         }
         
         let card_product = localStorage.getItem("card_to_product");
