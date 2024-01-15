@@ -68,7 +68,7 @@
       var container = "";
       for (var i = 0; i < allItems.length; i++) {
         container += `
-          <div  class=" col-md-3 card ">
+          <div  class=" col-md-3 card pr_box">
             <img class="w-25 product_box_img" src="${allItems[i].thumbnail}"/>
             <div class="col-md-8">
             <div class="item">
@@ -83,11 +83,11 @@
             </div>`;
       }
       document.getElementById("rowData").innerHTML = container;
-      let card = document.querySelectorAll(".product_box_img");
+      let card = document.querySelectorAll(".pr_box");
       for (let i = 0; card.length; i++){
         card[i].addEventListener("click", function (e) {
+          console.log(e.target);
           let cat=e.target.nextElementSibling.querySelector(".product_category").innerHTML;
-          console.log(allItems);
           let sim_item_arr = [];
           for (let i = 0; i < allItems.length; i++) {
             if (allItems[i].category==cat) {
@@ -106,7 +106,7 @@
           }
           
           localStorage.setItem("similer_item", JSON.stringify(sim_item_arr));
-          let img_src = e.target.getAttribute("src");
+          let img_src = e.target.querySelector(".product_box_img").getAttribute("src");
           let title = e.target.nextElementSibling.querySelector(".title").innerHTML;
           let describtion = e.target.nextElementSibling.querySelector(".describtion").innerHTML;
           let product_salary = e.target.nextElementSibling.querySelector(".product_salary").innerHTML;
