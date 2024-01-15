@@ -71,9 +71,60 @@ function signup() {
     localStorage.setItem("Users", JSON.stringify(users));
     window.history.pushState({}, "", "../index.html");
 
+////////
+updateNavLogoutIcon(); // Call a function to update the user icon to logout
+    redirectToHomePage(); // Redirect to the homepage
+}
+// /////////
+// Function to handle logout
+function logout() {
+    // Your existing logout logic
 
+    // After successful logout
+    updateNavSignupIcon(); // Call a function to update the user icon to signup
+    redirectToHomePage(); // Redirect to the homepage
 }
 
+function updateNavLogoutIcon() {
+    // Update the user icon to logout icon
+    let userIcon = document.getElementById('user-icon');
+    if (userIcon) {
+        userIcon.classList.remove('fa-user');
+        userIcon.classList.add('fa-sign-out-alt');
+    }
+}
+
+function updateNavSignupIcon() {
+    // Update the user icon back to signup icon
+    let userIcon = document.getElementById('user-icon');
+    if (userIcon) {
+        userIcon.classList.remove('fa-sign-out-alt');
+        userIcon.classList.add('fa-user');
+    }
+}
+
+function redirectToHomePage() {
+    // Redirect to the homepage
+    window.location.href = "../index.html";
+}
+
+// Call initializeUserIcon() when the page loads
+window.onload = initializeUserIcon;
+
+function initializeUserIcon() {
+    let userIcon = document.getElementById('user-icon');
+    if (userIcon) {
+        // Check if the user is logged in (you may use your own logic)
+        // For example, check if there's a user in the local storage
+        let isLoggedIn = localStorage.getItem('user') !== null;
+
+        if (isLoggedIn) {
+            // Update the user icon to logout icon
+            updateNavLogoutIcon();
+        }
+    }
+}
+/////
 
 function validatePassword(passwordInput) {
     var passRegex = /^(?=.*[0-9])[a-zA-Z0-9!@#$%^&*]{8,16}$/;
