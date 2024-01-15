@@ -135,3 +135,115 @@
 }
 
 /* END--    sign up and contact style */
+
+/* !------------ Start Check Out & Login Style------- */
+/* ? Start Check Out Style */
+.checkOutInfo{
+    height: 100vh;
+}
+.toShop{
+    color:#B08A42;
+
+}
+#checkOut{
+    height: 100vh;
+}
+.btn-1{
+    padding: 6px 25px;
+    background-color: #B08A42;
+    border-color: #B08A42;
+    border-radius: 7px;
+    border-color: transparent;
+    color: #fff;
+    width: 150px;
+    transition: 0.5s;
+}
+.btn-1:hover{
+    background-color: #272727;
+    color: #fff;
+}
+
+#checkOutValidation , #loginValidation ,#emailValidation ,#passwordValidation {
+    color: red;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+-webkit-appearance: none;
+margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+-moz-appearance: textfield;
+}
+/* ? End Check Out Style */
+
+/* ? Start Login Style */
+.login-Info{
+    padding:20px;
+}
+
+.trans{
+    transition: 0.4s all ease-out;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* !------------ Start Check Out & Login Style------- */
+.logo{
+    width:40px;
+}
+
+.navbar-nav li{
+    padding: 5px;
+}
+ul{
+    margin-right: 20px;
+}
+.search-form{
+    position: relative;
+}
+.form-control-search{
+    border-radius: 20px;
+    padding-left: 10px;
+    border: 1px solid #eee;
+    outline: none;
+    text-align: center;
+    height: 30px;
+}
+.form-control-search{
+    color: #d5d5d6;
+}
+.form-control-search::placeholder{
+    padding-left: 25px;
+}
+.search-sign{
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #b08a42;
+}
+.form-control-search:focus{
+    box-shadow: 0 0 5px #eee;
+}
+.form-control-search:focus ~ .search-sign{
+    display: none;
+}
+.navbar-toggler{
+    color: #b08a42;
+}
+.navbar{
+    height: min-content;
+}
