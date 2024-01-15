@@ -22,20 +22,21 @@
     let cartona = "";
     for (let i = 0; i < 3; i++){
         cartona += `
-        <div class="col-md-4">
-                        <div class="text-center box shadow rounded-4 ms-auto">
+                    <div class="col-md-4">
+                        <div class="text-center box shadow rounded-4 ms-auto pr_box">
                             <img src="${similer_item[i].img}" class="box-image " alt="">
                             <h5 class="w-100 similer-t fa-1x">${similer_item[i].title}</h5>
                             <h5 class="colBT w-50 ms-auto pb-2 similer-pt"><p class="d-inline similer-p">${similer_item[i].price}</p> $</h5>
                             <h5 class="colBT w-50 similer-d ms-auto pb-2 d-none">${similer_item[i].describtion} $</h5>
                         </div>
+                        
                     </div>
         `;
     }
     for (let i = 3; i < similer_item.length; i++){
         cartona += `
         <div class="col-md-4 addition-item mt-5">
-                        <div class="text-center box shadow rounded-4 ms-auto">
+                        <div class="text-center box shadow rounded-4 ms-auto pr_box">
                             <img src="${similer_item[i].img}" class="box-image " alt="">
                             <h5 class="w-100 similer-t fa-1x">${similer_item[i].title}</h5>
                             <h5 class="colBT w-50 ms-auto pb-2 similer-pt"><p class="d-inline similer-p">${similer_item[i].price}</p> $</h5>
@@ -49,7 +50,7 @@
         $(".addition-item").slideToggle(1000);
         if (bt_more.innerHTML == "More") {
             bt_more.textContent = "Less";
-            console.log('helloo');
+
         }
         else {
             bt_more.innerHTML = "More"
@@ -58,18 +59,15 @@
     let box = document.querySelectorAll(".box");
     for (let i = 0; i < box.length; i++){
         box[i].addEventListener("click", function (evntInfo) {
-            let div = evntInfo.target.parentElement;
+            let div = evntInfo.target;
             let img = imgPro.getAttribute("src");
             let ti = title.textContent;
             let dec = evntInfo.target.parentElement.querySelector(".similer-d");
             let pri = evntInfo.target.parentElement.querySelector(".similer-p");
-            console.log(pri);
-            // let ti = title.textContent;
             imgPro.setAttribute("src", div.children[0].getAttribute("src"));
             title.innerHTML = div.children[1].textContent;
             descc.innerHTML = dec.innerHTML;
             sal.innerHTML = pri.innerHTML;
-            console.log(pri.innerHTML);
             parseSal = parseInt(sal.textContent);
             finalSal = parseSal;
             div.children[0].setAttribute("src",img) ;
@@ -114,7 +112,6 @@
             arr = JSON.parse(card_product);
             arr.push(opj);
             localStorage.setItem("card_to_product", JSON.stringify(arr));
-            console.log(JSON.parse(localStorage.getItem("card_to_product")));
         }
         finalSal = parseSal;
         sal.innerHTML = finalSal;
