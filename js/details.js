@@ -9,6 +9,8 @@
     let imgPro = document.querySelector("#imgPro");
     let similer_box = document.querySelector(".similer_box");
     let bt_more = document.querySelector(".bt-more");
+    let cartCount = document.getElementById("cart-count");
+    
     let product_object = JSON.parse(localStorage.getItem("product"));
     imgPro.setAttribute("src",product_object.img)
     title.innerHTML=product_object.tit;
@@ -117,9 +119,18 @@
         sal.innerHTML = finalSal;
         x=1
         count.innerHTML = x;
+
+        // check
+    let element = document.getElementById("icon");
+    element.classList.remove("fa-cart-shopping");
+    element.classList.add("fa-check");
     });
 
-
+    add.addEventListener('click', function() {
+         let products = JSON.parse(localStorage.getItem("card_to_product")) || [];
+        let currentCount = products.length;
+        cartCount.innerText = currentCount;
+       });
 
 
  })();
