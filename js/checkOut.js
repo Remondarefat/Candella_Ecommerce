@@ -13,7 +13,6 @@ let CVVInput =document.getElementById('CVV');
 let checkOutValidation =document.getElementById('checkOutValidation');
 var orderInfo=[]; 
 let order={};
-// checkOutValidation.textContent="";
 
 // !--- check Payment Method----
 for (var i = 0; i < paymentMethodInput.length; i++) {
@@ -28,7 +27,7 @@ for (var i = 0; i < paymentMethodInput.length; i++) {
         orderInfo.push(order);
         localStorage.setItem("order", JSON.stringify(orderInfo));
       }else{
-        $("#creditCardInfo").slideToggle();
+        $("#creditCardInfo").slideUp();
         order={
           payMentMethod:this.value,
         };
@@ -64,7 +63,6 @@ if(order.payMentMethod=='CreditCard'){
   if(!cityNameInput.value || !streetNameInput.value || !BuildingDescriptionInput.value || !secPhoneInput.value 
     || paymentMethodInput.value=='CreditCard' || !CardNumberInput.value || !CVVInput.value ){
       checkOutValidation.textContent="Please Fill All Required Inputs";
-      console.log("hhhhhh");
       return false;
   }
       location.assign('orderDetails.html');

@@ -13,10 +13,10 @@ btnSubmit.addEventListener('click',checkInput);
 function checkInput() {
 
 //! Check if users are stored in local storage
-  if(usersContainer.length == 0){
-    alert('plese signup first');
-    location.assign('signup.html');
-  }
+  // if(usersContainer.length == 0){
+  //     loginValidation.textContent="plese signup first ";
+  //   // location.assign('signup.html');
+  // }
   for(let i=0 ; i < usersContainer.length ;i++){
     if (passwordInput.value == usersContainer[i].password &&
       emailInput.value == usersContainer[i].email){
@@ -29,27 +29,29 @@ function checkInput() {
 
 // ! Login Validation 
 function checkValidation(){
-  if(!emailInput || !passwordInput){
-     loginValidation.textContent="Please Fill All Required Inputs";
-     return false ;
+  if(!emailInput.value || !passwordInput.value){
+      loginValidation.textContent="Please Fill All Required Inputs ";
+      return false ;
   }
   else {
-     let userFound = false;
-     for(let i = 0; i < usersContainer.length; i++){
-       if(emailInput.value == usersContainer[i].email){
-         userFound = true;
-         if(passwordInput.value != usersContainer[i].password){
-           passwordValidation.textContent="Invalid Password";
-           return false;
-         }
-         break;
-       }
-     }
-     if(!userFound){
-       emailValidation.textContent="Invalid Email";
-     }
-     else {
-       return true ;
-     }
+    let userFound = false;
+      for(let i = 0; i < usersContainer.length; i++){
+        if(emailInput.value == usersContainer[i].email){
+          userFound = true;
+          if(passwordInput.value != usersContainer[i].password){
+            passwordValidation.textContent="Invalid Password";
+            alert("heloo");
+
+            return false;
+          }
+          break;
+        }
+      }
+      if(!userFound){
+        emailValidation.textContent="Invalid Email";
+      }
+      else {
+        return true ;
+      }
+    }
   }
- }

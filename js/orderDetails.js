@@ -52,10 +52,13 @@ secPhoneInput.value='';
 BuildingDescriptionInput.value='';
 cityNameInput.value='';
 streetNameInput.value='';
+creditCardInfo.value="";
 if(paymentMethodInput.value=='CreditCard'){
     CardNumberInput.value='';
     CVVInput.value='' ;
 }
+localStorage.removeItem("order");
+localStorage.removeItem("checkout_cart");
 }
 
 // ! function to display cart Items from Local storage 
