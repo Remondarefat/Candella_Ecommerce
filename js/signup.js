@@ -69,7 +69,8 @@ function signup() {
     };
     users.push(user);
     localStorage.setItem("Users", JSON.stringify(users));
-    // window.history.pushState({}, "", "../index.html");
+    localStorage.setItem("isLogin","1");
+    window.history.pushState({}, "", "../index.html");
 
 
 }

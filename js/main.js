@@ -1,9 +1,27 @@
+  //start code salma
 (function(){
   let img_slider = document.getElementsByClassName('img_slider');
   let step = 0;
   let nbr_img = img_slider.length;
   let prev = document.querySelector('.prev');
   let next = document.querySelector('.next');
+
+  let isLog = localStorage.getItem("isLogin");
+  
+  let signupIcon = document.querySelector('#signupIcon');
+  let signoutIcon = document.querySelector('#signoutIcon');
+   if (isLog == "1"){
+    signupIcon.classList.add("hiddenIcon");
+    signoutIcon.classList.remove("hiddenIcon");
+   }
+   else{
+    signupIcon.classList.remove("hiddenIcon");
+    signoutIcon.classList.add("hiddenIcon");
+   }
+   signoutIcon.addEventListener("click",function(){
+    localStorage.setItem("isLogin","0");
+   })
+   
   // moataz code
 
   
@@ -53,7 +71,7 @@
       allItems = productsArray;
       displayProduct(allItems);
     }
-  
+    
     window.onload = function () {
       getProducts("");
     };
@@ -62,6 +80,7 @@
       category[i].addEventListener("click", function (eventInfo) {
         getProducts(eventInfo.target.getAttribute("data-category"));
         eventInfo.preventDefault();
+        
       });
     }
     function displayProduct() {

@@ -20,7 +20,8 @@ function checkInput() {
   for(let i=0 ; i < usersContainer.length ;i++){
     if (passwordInput.value == usersContainer[i].password &&
       emailInput.value == usersContainer[i].email){
-        location.assign('index.html')
+        location.assign('index.html');
+        localStorage.setItem("isLogin","1");
         break;
       }
   }
