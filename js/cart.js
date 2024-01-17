@@ -31,7 +31,7 @@ function displayCartItems() {
             <div class="col-12">
                 <p class="text-start">product</p>
                 <hr>
-                <div class="d-flex del">
+                <div class="d-flex ImageOrder del">
                     <img src="${product.imgSrc}" class="rounded-3 w-50 itemImage" alt="">
                     <div class="ms-5">
                         <h5 class="itemDesc">${product.title}</h5>

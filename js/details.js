@@ -9,6 +9,8 @@
     let imgPro = document.querySelector("#imgPro");
     let similer_box = document.querySelector(".similer_box");
     let bt_more = document.querySelector(".bt-more");
+    let cartCount = document.getElementById("cart-count");
+    
     let product_object = JSON.parse(localStorage.getItem("product"));
     imgPro.setAttribute("src",product_object.img)
     title.innerHTML=product_object.tit;
@@ -22,7 +24,7 @@
     let cartona = "";
     for (let i = 0; i < 3; i++){
         cartona += `
-                    <div class="col-md-4">
+                    <div class="col-md-4 wow slideInLeft">
                         <div class="text-center box shadow rounded-4 ms-auto pr_box">
                             <img src="${similer_item[i].img}" class="box-image " alt="">
                             <h5 class="w-100 similer-t fa-1x">${similer_item[i].title}</h5>
@@ -35,7 +37,7 @@
     }
     for (let i = 3; i < similer_item.length; i++){
         cartona += `
-        <div class="col-md-4 addition-item mt-5">
+        <div class="col-md-4 addition-item mt-5 ">
                         <div class="text-center box shadow rounded-4 ms-auto pr_box">
                             <img src="${similer_item[i].img}" class="box-image " alt="">
                             <h5 class="w-100 similer-t fa-1x">${similer_item[i].title}</h5>
@@ -62,6 +64,7 @@
             let div = evntInfo.target;
             let img = imgPro.getAttribute("src");
             let ti = title.textContent;
+            let sa = sal.textContent;
             let dec = evntInfo.target.parentElement.querySelector(".similer-d");
             let pri = evntInfo.target.parentElement.querySelector(".similer-p");
             imgPro.setAttribute("src", div.children[0].getAttribute("src"));
@@ -74,6 +77,7 @@
             div.children[1].innerHTML = ti;
             x=1
             count.innerHTML = x;
+            div.querySelector(".similer-p").innerHTML=sa;
         })
     }
     plus.addEventListener("click", function () {
@@ -117,10 +121,19 @@
         sal.innerHTML = finalSal;
         x=1
         count.innerHTML = x;
+
+        // check
+    let element = document.getElementById("icon");
+    element.classList.remove("fa-cart-shopping");
+    element.classList.add("fa-check");
     });
 
-
-
+    add.addEventListener('click', function() {
+         let products = JSON.parse(localStorage.getItem("card_to_product")) || [];
+        let currentCount = products.length;
+        cartCount.innerText = currentCount;
+    });
+    new WOW().init();
 
  })();
 

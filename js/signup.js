@@ -69,7 +69,7 @@ function signup() {
     };
     users.push(user);
     localStorage.setItem("Users", JSON.stringify(users));
-    // window.history.pushState({}, "", "../index.html");
+    window.history.pushState({}, "", "../index.html");
 
 
 }

@@ -3,13 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Candella | Product_details</title>
-    <!-- TODO:-------------------START google fonts----------------- -->
+    <title>Candella | Product Details</title>
+    <link rel="icon" type="image/x-icon" href="images/logo.svg">
+        <!-- TODO:-------------------START google fonts----------------- -->
 
     <!-- TODO:-------------------END google fonts------------------- -->
 
     <!-- TODO:-------------------START CSS Links----------------------->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/all.min.css">
     <script src="css/jquery.min.js"></script>
@@ -41,8 +43,10 @@
                         <li class="nav-item">
                             <a class="nav-link d-none" href="#"><i class="fa-solid fa-right-from-bracket"></i></a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
+                        <li class="nav-item" id="cart-icon">
+                            <a class="nav-link" href="cart.html"><i class="fa-solid fa-cart-shopping"></i>
+                                <span id="cart-count"></span>
+                            </a>
                         </li>
                     </ul>
     
@@ -75,7 +79,7 @@
                                 
                             </div>
                             <button id="add" class="bgcolBT btn-1  text-white w-100 mx-auto px-5 py-2 border-0 rounded-2 d-flex justify-content-center align-items-center">
-                                <i class="fa-solid fa-cart-shopping"></i>
+                                <i class="fa-solid fa-cart-shopping" id="icon"></i>
                                 <h5 class="">+ Add to cart</h5>
                             </button>
                             </div>
@@ -184,13 +188,15 @@
             <div class="copyR">
                 <p class="copyrightParagraph">&copy; Candella inc All rights reserved</p>
             </div>
-            
         
+    
+    
         <script src="js/footer.js"></script>
         <!-------------------------------------------- End Of Footer ------------------------------------------>
 
     
     <!-- TODO:-------------------JS Links------------------>
+    <script src="js/wow.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/details.js"></script>
     <!-- TODO:-------------------END JS Links---------------- -->

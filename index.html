@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Candella</title>
-    <!-- TODO:-------------------START google fonts----------------- -->
+    <title>Candella | Home</title>
+    <link rel="icon" type="image/x-icon" href="images/logo.svg">
+        <!-- TODO:-------------------START google fonts----------------- -->
 
     <!-- TODO:-------------------END google fonts------------------- -->
 
@@ -21,7 +22,7 @@
 </head>
 <body>
     <div class="container-fluid p-0">
-    <nav class="navbar fixed-top navbar-expand-lg shadow bg-body-tertiary rounded">
+    <nav class="navbar fixed-top navbar-expand-lg shadow  rounded">
         <div class="container-fluid d-flex align-items-center h-100 ">
             <a class="navbar-brand d-flex justify-content-center align-items-center ms-5" href="index.html">
                 <img src="images/logo.svg" class="logo" alt="logo">
@@ -35,8 +36,8 @@
                 <ul class="navbar-nav ms-auto d-flex align-items-center ms-auto ">
                     <li>
                         <form class="search-form" role="search">
-                            <input class="form-control-search mx-auto " type="search" placeholder="Search"
-                                aria-label="Search">
+                            <input class="form-control-search text-dark mx-auto " type="search" placeholder="Search"
+                                aria-label="Search" oninput="search(this.value);" >
                             <i class="fa-solid fa-magnifying-glass search-sign"></i>
                         </form>
                     </li>

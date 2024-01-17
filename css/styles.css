@@ -1,14 +1,8 @@
+/* ----------------------------------------- General-------------------------------------------------- */
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-:root{
-    --main-color:#EDCBA8;
-    --second-color:#EDCBA6;
-    --bt-bg-color:#B08A42;
-    --navbar-bg-color:#272727;
-    --nav-tabs-bg-color:#E0E0E0;
 }
 
 html{
@@ -21,27 +15,32 @@ html{
     --navbar-bg-color:#272727;
     --nav-tabs-bg-color:#E0E0E0;
 }
-.slider{
+/*------------------------------------- Slider -------------------------------------------------- */
+.slider {
     height: 100vh;
     position: relative;
-    margin-top: 60px;
+    margin-top: 75px;
+    overflow: hidden;
+    
 }
-.slider img{
-    /* object-fit: cover; */
-    /* height: 100%;
-    width: 100%;  */
+
+.slider img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
     position: absolute;
     top: 0;
     left: 0;
-    opacity: 0; 
-    transition:opacity 0.5s;
+    opacity: 0;
+    transition: opacity 0.5s;
 }
-.slider img.active{
-    opacity: 1;
 
+.slider img.active {
+    opacity: 1;
 }
+
 .next,
-.prev{
+.prev {
     color: #fff;
     font-size: 3rem;
     position: absolute;
@@ -53,102 +52,27 @@ html{
     color: #272727;
     font-weight: bold;
 }
-.next{
+
+.next {
     right: 2rem;
 }
-.prev{
-    left: 2rem;
-} 
 
+.prev {
+    left: 2rem;
+}
 
 .img_slider {
-     width: 100%;
-}
-/* START--  sign up & contact style  */
-.contact-first-block{
-    padding: 20px;
+    width: 100%;
+    height: auto;
 }
 
-.contact-first-block input {
-    margin-bottom: 15px;
-    
+.container-fluid {
+    margin-right: 0;
+    margin-left: 0;
 }
-.signup-logo , .contact-logo {
-    width: 35px;
-    align-self: flex-start;
-}
-.signup-image  {
-    width: -webkit-fill-available;
-    object-fit: cover;
-    object-position: 15% 1%;
-    height: 100vh;
-    max-width: 100%;
+/* ----------------------------------End of slider -------------------------------------------------*/
 
-}
-.signup-image {
-    zoom:200%;
-}
-
-.redirect-anchor{
-    color: #B08A42;
-}
-  #signup-heading, .redirect-anchor:hover{
-    color: #272727;
-}
-.signup-btn {
-    padding: 6px 25px;
-    background-color: #B08A42;
-    border-color: #B08A42;
-    border-radius: 7px;
-    border-color: transparent;
-    color: #fff;
-    width: 150px;
-}
-.signup-btn:hover , .contact-btn:hover {
-    background-color: #272727;
-    color: #fff;
-}
-.signup-image-container {
-    height: 100vh;
-    overflow: hidden;
-}
-.signup-validation {
-    color: red;
-    margin: 5px 0;
-}
-#password_validation {
-   
-    width: 400px;
-}
-.password-container {
-    position: relative;
-}
-.toggle-password {
-    position: absolute;
-    right: 10px;
-    top: 50%;
-    transform: translateY(-50%);
-    cursor: pointer;
-}
-.contact-image{
-    width: -webkit-fill-available;
-    object-fit: cover;
-    object-position: 80% 1%;
-    height: 100vh;
-    max-width: 100%;
-}
-.contact-textarea{
-    height: 100px;
-}
-.contact-btn {
-    margin-top: 32px;
-    width: 137px;
-    background-color: #B08A42;
-    border-color:transparent;
-}
-
-/* END--    sign up and contact style */
-
+/*----------------------- Nav bar and Home page products ------------------------------------ */
 .logo{
     width:40px;
 }
@@ -169,6 +93,7 @@ ul{
     outline: none;
     text-align: center;
     height: 30px;
+    color: #000;
 }
 .form-control-search{
     color: #d5d5d6;
@@ -181,7 +106,7 @@ ul{
     left: 10px;
     top: 50%;
     transform: translateY(-50%);
-    color: #b08a42;
+    color: var(--bt-bg-color);
 }
 .form-control-search:focus{
     box-shadow: 0 0 5px #eee;
@@ -190,19 +115,18 @@ ul{
     display: none;
 }
 .navbar-toggler{
-    color: #b08a42;
+    color: var(--bt-bg-color);
 }
 .navbar{
     height: min-content;
 }
 .catogories{
-    background-color: #E0E0E0;
+    background-color: var(--nav-tabs-bg-color);
     z-index: 1000;
     list-style: none;
     display: flex;
     justify-content: center;
     padding: 10px;
-    margin-top: 80px;
 }
 .catogories li{
     padding: 5px;
@@ -213,13 +137,13 @@ ul{
     border: none !important; 
 }
 .catogories li:hover a{
-    background-color: #b08a42 !important;
+    background-color: var(--bt-bg-color)!important;
     color: white;
 
 }
 
 .Active{ 
-    background-color: #b08a42 !important;
+    background-color: var(--bt-bg-color) !important;
     color: #eee !important;
     transform: scale(1.2);
     transition: 0.5s;
@@ -262,7 +186,7 @@ ul{
     color: #000;
 }
 .card p{
-    color: #B08A42;
+    color: var(--bt-bg-color);
     font-size: 20px;
     margin-top: -20px;
     width: 100%;
@@ -270,7 +194,7 @@ ul{
     line-height: 50px;
     text-align: center;
     font-weight:400;
-    background-color: #E0E0E0;
+    background-color: var(--nav-tabs-bg-color);
     border-radius: 10px;
 }
 .top-button {
@@ -278,7 +202,7 @@ ul{
     bottom: 20px;
     right: 40px;
     padding: 20px;
-    background-color: #B08A42;
+    background-color: var(--bt-bg-color);
     color: white;
     border: none;
     cursor: pointer;
@@ -307,8 +231,95 @@ ul{
 .product_box_img{
     cursor: pointer;
 }
+/* ---------------------------- End of home page ------------------------------------------------- */
 
-/* START--    Product Details style */
+/* ------------------------------  sign up & contact style ----------------------------------------  */
+.contact-first-block{
+    padding: 20px;
+}
+
+.contact-first-block input {
+    margin-bottom: 15px;
+    
+}
+.signup-logo , .contact-logo {
+    width: 35px;
+    align-self: flex-start;
+}
+.signup-image  {
+    width: -webkit-fill-available;
+    object-fit: cover;
+    object-position: 15% 1%;
+    height: 100vh;
+    max-width: 100%;
+
+}
+.signup-image {
+    zoom:200%;
+}
+
+.redirect-anchor{
+    color: var(--bt-bg-color);
+}
+  #signup-heading, .redirect-anchor:hover{
+    color: var(--navbar-bg-color);
+}
+.signup-btn {
+    padding: 6px 25px;
+    background-color: var(--bt-bg-color);
+    border-color: var(--bt-bg-color);
+    border-radius: 7px;
+    border-color: transparent;
+    color: #fff;
+    width: 150px;
+}
+.signup-btn:hover , .contact-btn:hover {
+    background-color: var(--navbar-bg-color);
+    color: #fff;
+}
+.signup-image-container {
+    height: 100vh;
+    overflow: hidden;
+}
+.signup-validation {
+    color: red;
+    margin: 5px 0;
+}
+#password_validation {
+   
+    width: 400px;
+}
+.password-container {
+    position: relative;
+}
+.toggle-password {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+.contact-image{
+    width: -webkit-fill-available;
+    object-fit: cover;
+    object-position: 80% 1%;
+    height: 100vh;
+    max-width: 100%;
+}
+.contact-textarea{
+    height: 100px;
+}
+.contact-btn {
+    margin-top: 32px;
+    width: 137px;
+    background-color: var(--bt-bg-color);
+    border-color:transparent;
+}
+
+/* -------------------------End of sign up and contact style --------------------------------- */
+
+
+/* -------------------------------- Product Details style -------------------------------------- */
 #home{
     position: relative;
     top: 13vh;
@@ -362,16 +373,7 @@ ul{
     animation-fill-mode: forwards;
     cursor: pointer;
 }
-/* @keyframes ani{
-    0%{
-        width: 0;
-        height: 50%;
-    }
-    100%{
-        width: 100%;
-        height: 50%;
-    }
-} */
+
 #product-details .container div .add{
     border: 1px solid var(--bt-bg-color) !important;
 }
@@ -430,12 +432,16 @@ ul{
 #plus , #min{
     cursor: pointer;
 }
-/* End--    Product Details style */
 
-
-
-
-
+#cart-count {
+    background-color: var(--bt-bg-color);
+    padding: 0px 4px;
+    border-radius: 50%;
+    color: white;
+    position: absolute;
+    top: 16px;
+}
+/*------------------------------- End of Product Details style ------------------------------- */
 
 
 /*      ------------------------------- Footer -----------------------------------                  */
@@ -445,7 +451,7 @@ ul{
     bottom: 0;
     left: 0;
     width: 100%;
-    background-color: #272727;
+    background-color: var(--navbar-bg-color);
     padding: 10px;
     text-align: center;
     /* height: 500px; */
@@ -453,6 +459,7 @@ ul{
     .separator{
     margin-top: 50px;
     margin-bottom: 30px;
+    width: 100%;
     
     }
     .logoSection {
@@ -486,7 +493,7 @@ ul{
     
     .aboutFooter,
     .contactFooter {
-    color: #B08A42;
+    color: var(--bt-bg-color);
     text-decoration: none; 
     
     }
@@ -512,7 +519,8 @@ ul{
     
     .aboutFooter:hover,
     .contactFooter:hover {
-    color: #E0E0E0;}
+    color: var(--nav-tabs-bg-color);
+}
     
     .copyrightParagraph{
         color: #c0c0c0;
@@ -521,7 +529,7 @@ ul{
     .aboutDiv {
         display: none; 
         width: 80%;
-        background-color: #B08A42;
+        background-color: var(--bt-bg-color);
         border-radius: 20px;
         margin: 20px;
         padding: 20px;
@@ -534,7 +542,7 @@ ul{
         color:#c3c2c2;
     }
     .aboutDiv a:hover{
-        color: #272727;
+        color: var(--navbar-bg-color);
     }
     .aboutParagraph{
     text-align: left;
@@ -562,13 +570,13 @@ ul{
     }
     .che:hover {
         color: white;
-        background-color: #272727;
+        background-color: var(--navbar-bg-color);
     }
     .minusItem:hover {
-        color:#272727;
+        color:var(--navbar-bg-color);
     }
     .plusItem:hover{
-        color:#272727;
+        color:var(--navbar-bg-color);
 
     }
 
@@ -577,23 +585,29 @@ ul{
     justify-content: center;
     }
     .removeItem:hover{
-        color:#272727;
+        color:var(--navbar-bg-color);
     }
     .gitIcon{
         width: 20px;
     }
-    
+    /*  cart */
+    .cart-height {
+        min-height: 51vh;
+    }
     
     /*      ------------------------------- End of Footer -----------------------------------                  */
     
-/* !------------ Start Check Out & Login Style------- */
+/* !-------------------------- Start Check Out & Login Style---------------------------- */
 /* ? Start Check Out Style */
 .checkOutInfo{
     height: 100vh;
 }
 .toShop{
-    color:#B08A42;
+    color:var(--bt-bg-color);
 
+}
+.ImageOrder{
+    height: 200px;
 }
 #checkOut{
     height: 100vh;
@@ -601,18 +615,18 @@ ul{
 #creditCardInfo{
     display: none;
 }
-.btn-1{
+.btn-1 , .signup-btn , .contact-btn{
     padding: 6px 25px;
-    background-color: #B08A42;
-    border-color: #B08A42;
+    background-color: var(--bt-bg-color);
+    border-color: var(--bt-bg-color);
     border-radius: 7px;
     border-color: transparent;
     color: #fff;
     width: 150px;
     transition: 0.5s;
 }
-.btn-1:hover{
-    background-color: #272727;
+.btn-1:hover , .signup-btn:hover , .contact-btn:hover{
+    background-color: var(--navbar-bg-color);
     color: #fff;
     scale:1.1;
 }
@@ -627,11 +641,10 @@ input::-webkit-inner-spin-button {
 -webkit-appearance: none;
 margin: 0;
 }
-
 /* Firefox */
-input[type=number] {
+/* input[type=number] {
 -moz-appearance: textfield;
-}
+} */
 /* ? End Check Out Style */
 
 /* ? Start Login Style */
@@ -644,14 +657,8 @@ input[type=number] {
 }
 
 
-
-
-
-
-
-
-
-
-
-
 /* !------------ End Check Out & Login Style------- */
+.navbar{
+    background-color: rgb(248,249,250);
+    transition: background-color 1s;
+}
