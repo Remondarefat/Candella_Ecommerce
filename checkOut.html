@@ -1,18 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Candella | Check Out</title>
-    <link rel="icon" type="image/x-icon" href="images/logo.svg">    <!-- TODO:-------------------START CSS Links----------------------------->
+    <link rel="icon" type="image/x-icon" href="images/logo.svg">
+    <!-- TODO:-------------------START CSS Links----------------------------->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/all.min.css">
     <link rel="stylesheet" href="css/styles.css">
     <!-- TODO:-------------------END CSS Links---------------------------- -->
     <!-- TODO:-------------------Start jQuery Links------------------------ -->
-    <script src="js/jquery.min.js"></script>      
+    <script src="js/jquery.min.js"></script>
     <!-- TODO:-------------------END jQuery Links------------------------ -->
 </head>
+
 <body>
     <!-- ! ChechOut Form -->
     <!-- !NavBar -->
@@ -23,8 +26,8 @@
                     <img src="images/logo.svg" class="logo" alt="logo">
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                    aria-label="Toggle navigation">
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse rounded-5 pt-2 toggle-menu" id="navbarSupportedContent">
@@ -49,178 +52,210 @@
                             </a>
                         </li>
                     </ul>
-    
+
                 </div>
             </div>
-        </nav>
-    
-<!-- ! check out section -->
-    <section id="checkOut" >
-        
-            
-        <div class="checkOutInfo d-flex justify-content-center align-items-center">
-            <div class="container d -flex flex-wrap flex-column">
-            <div class="text-center"> 
-            <a class="toShop d-inline-block mt-5" href="index.html">Back to shopping</a>
-            </div>
-            <div class="row d-flex justify-content-center mt-5 ">
-                <div class="col-md-5 ">
-                    <div class="row mt-4">
-                        <div class="col">
-                            <h3 id="signup-heading" class="fs-4 ">Delivery Details</h3>
-                        </div>
+                
+        </nav>
+
+        <!-- ! check out section -->
+        <section id="checkOut">
+
+
+            <div class="checkOutInfo d-flex justify-content-center align-items-center">
+                <div class="container d -flex flex-wrap flex-column">
+                    <div class="text-center">
+                        <a class="toShop d-inline-block mt-5" href="index.html">Back to shopping</a>
                     </div>
-                    <div class="row mt-2 mt-5">
-                        <div class="col-md-6">
-                            <input class=" form-control" id="cityName" type="text" name="city" placeholder="city" required>
-                        </div>
-                        <div class="col-md-6">
-                            <input class="  form-control" id="streetName" type="text" name="street" placeholder="Street" required>                                        </div>
-                    </div>
-                    <div class="row mt-2">
-                        <div class="col">
-                            <input class="  form-control" id="BuildingDescription" type="text" name="BuildingDescription" placeholder="Building Description" required>                                        
-                        </div>
-                    </div>
-                    <div class="row mt-2">
-                        <div class="col">
-                            <input class="  form-control" id="secPhone" type="text" name="secPhone" placeholder="Secondary Phone" required>                                        
-                        </div>
-                    </div>
-                    <div class="row mt-4">
-                        <div class="col">
-                            <h3 id="signup-heading" class="fs-4">Payment Method:</h3>
-                        </div>
-                    </div>
-                    <div class="row mt-5">
-                        <div class="col-md-6">                           
-                                <input type="radio" id="CreditCard" name="payment_method" value="CreditCard" >
-                                <label for="CreditCard">Credit Card</label>                           
-                        </div>
-                        <div class="col-md-6"> 
-                                <label for="Cash">Cash</label>
-                                <input type="radio" id="Cash" name="payment_method" value="Cash" > 
-                        </div>
-                    </div>
-                    <div id="creditCardInfo" class="trans ">
-                        <div class="creditCardInfoDropD">
-                            <div class="row mt-3">
+                    <div class="row d-flex justify-content-center mt-5 ">
+                        <div class="col-md-5 ">
+                            <div class="row mt-4">
+                                <div class="col">
+                                    <h3 id="signup-heading" class="fs-4 ">Delivery Details</h3>
+                                </div>
+                            </div>
+                            <div class="row mt-2 mt-5">
                                 <div class="col-md-6">
-                                    <input id="CardNumber" class=" form-control" type="number" placeholder="CardNumber" required maxlength="16" pattern="[0-9]">
+                                    <input class=" form-control" id="cityName" type="text" name="city"
+                                        placeholder="city" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <input class="  form-control" id="streetName" type="text" name="street"
+                                        placeholder="Street" required>
                                 </div>
                             </div>
                             <div class="row mt-2">
-                                <div class="col-md-6">
-                                    <input id="CVV" class="form-control" type="number" placeholder="CVV" maxlength="3" required>
+                                <div class="col">
+                                    <input class="  form-control" id="BuildingDescription" type="text"
+                                        name="BuildingDescription" placeholder="Building Description" required>
                                 </div>
                             </div>
+                            <div class="row mt-2">
+                                <div class="col">
+                                    <input class="  form-control" id="secPhone" type="text" name="secPhone"
+                                        placeholder="Secondary Phone" required>
+                                </div>
+                            </div>
+                            <div class="row mt-4">
+                                <div class="col">
+                                    <h3 id="signup-heading" class="fs-4">Payment Method:</h3>
+                                </div>
+                            </div>
+                            <div class="row mt-5">
+                                <div class="col-md-6">
+                                    <input type="radio" id="CreditCard" name="payment_method" value="CreditCard">
+                                    <label for="CreditCard">Credit Card</label>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="Cash">Cash</label>
+                                    <input type="radio" id="Cash" name="payment_method" value="Cash">
+                                </div>
+                            </div>
+                            <div id="creditCardInfo" class="trans ">
+                                <div class="creditCardInfoDropD">
+                                    <div class="row mt-3">
+                                        <div class="col-md-6">
+                                            <input id="CardNumber" class=" form-control" type="number"
+                                                placeholder="CardNumber" required maxlength="16" pattern="[0-9]">
+                                        </div>
+                                    </div>
+                                    <div class="row mt-2">
+                                        <div class="col-md-6">
+                                            <input id="CVV" class="form-control" type="number" placeholder="CVV"
+                                                maxlength="3" required>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="checkOutValidation" class="mt-3 text-center fs-5"></div>
+                            <div class="text-center">
+                                <button onclick="orderSubmit()"
+                                    class=" btn-1  py-2 px-5 d-inline-block mt-5 text-decoration-none  rounded-2">Submit</button>
+                            </div>
                         </div>
                     </div>
-                        <div id="checkOutValidation" class="mt-3 text-center fs-5"></div>
-                <div class="text-center">
-                    <button onclick="orderSubmit()" class=" btn-1  py-2 px-5 d-inline-block mt-5 text-decoration-none  rounded-2" >Submit</button>
-                </div>
                 </div>
             </div>
-        </div>
-        </div>
-        </div> 
+    </div>
     </section>
-<!-- --------------------Footer-------------------- -->
-        <div class="footer">
-            <div class="footerSec1">
-                <img class="separator" src="images/line-1.svg" />
-                <div class="logoSection"> 
-                    <div class="logoSec">
-                        <img src="images/logo_b&w .svg" class="logoFooter">
-                        <p class="logoDesc">Candella &copy;.</p>
-                    </div>
-                    <div class="contactAboutSection">
-                        <a class="aboutFooter rounded-top-5" href="#" target="_parent" >About Us</a>
-                        <a class="contactFooter" href="contact.html">Contact Us</a>
-                    </div>
+    <!-- --------------------Footer-------------------- -->
+    <div class="footer">
+        <div class="footerSec1">
+            <img class="separator" src="images/line-1.svg" />
+            <div class="logoSection">
+                <div class="logoSec">
+                    <img src="images/logo_b&w .svg" class="logoFooter">
+                    <p class="logoDesc">Candella &copy;.</p>
+                </div>
+                <div class="contactAboutSection">
+                    <a class="aboutFooter rounded-top-5" href="#" target="_parent">About Us</a>
+                    <a class="contactFooter" href="contact.html">Contact Us</a>
                 </div>
             </div>
-            <div  class="aboutDiv">
-                <div class="aboutParagraph">
-                    <h5 class=" mb-5">Candella is a FrontEnd E-commerce Project.</h5>
-                    <h5>GitHub Repo :</h5>
-                    <a href="https://github.com/Remondarefat/JavaScript_Project.git ">
-                        https://github.com/Remondarefat/JavaScript_Project.git 
-                    </a>
-                    <h5 class="mt-5">Our Team:</h5>
+        </div>
+        <div class="aboutDiv">
+            <div class="aboutParagraph">
+                <h5 class=" mb-5">Candella is a FrontEnd E-commerce Project.</h5>
+                <h5>GitHub Repo :</h5>
+                <a href="https://github.com/Remondarefat/JavaScript_Project.git ">
+                    https://github.com/Remondarefat/JavaScript_Project.git
+                </a>
+                <h5 class="mt-5">Our Team:</h5>
 
-                    <div class="container">
-                        <div class="row justify-content-center align-items-center">
+                <div class="container">
+                    <div class="row justify-content-center align-items-center">
 
-                            <div class="col-md-2 col-sm-4 aboutFooterDiv">
-                                <img class=" rounded-circle aboutTeamImg" src="images/msps.jpeg" alt="">
-                                <p style="font-size: 12px; " class="">
-                                    <a class="" href="https://www.linkedin.com/in/marwan-salem-442b96151/"> 
-                                        <img src="images/linkedinlogo.png" class="gitIcon"> Marwan Salem
-                                    </a></p>
-                            </div>
+                        <div class="col-md-2 col-sm-4 aboutFooterDiv">
+                            <img class=" rounded-circle aboutTeamImg" src="images/msps.jpeg" alt="">
+                            <p style="font-size: 12px; " class="">
+                                <a class="" href="https://www.linkedin.com/in/marwan-salem-442b96151/">
+                                    <img src="images/linkedinlogo.png" class="gitIcon"> Marwan Salem
+                                </a>
+                            </p>
+                        </div>
 
-                            <div class="col-md-2 col-sm-4 aboutFooterDiv">
-                                <img class=" rounded-circle aboutTeamImg" src="images/mgps.jpg" alt="">
-                                <p style="font-size: 12px;">
-                                    <a class="" href="https://www.linkedin.com/in/moataz-gamal-293146217/"> 
-                                        <img src="images/linkedinlogo.png" class="gitIcon "> Moataz Gamal 
-                                    </a>
-                                </p>
-                            </div>
+                        <div class="col-md-2 col-sm-4 aboutFooterDiv">
+                            <img class=" rounded-circle aboutTeamImg" src="images/mgps.jpg" alt="">
+                            <p style="font-size: 12px;">
+                                <a class="" href="https://www.linkedin.com/in/moataz-gamal-293146217/">
+                                    <img src="images/linkedinlogo.png" class="gitIcon "> Moataz Gamal
+                                </a>
+                            </p>
+                        </div>
 
-                            <div class="col-md-2 col-sm-4 aboutFooterDiv">
-                                <img class=" rounded-circle aboutTeamImg" src="images/rsps.jpg" alt="">
-                                <p style="font-size: 12px;">
-                                    <a class="" href="https://www.linkedin.com/in/rehab-sabry-08a864275/"> 
-                                        <img src="images/linkedinlogo.png" class="gitIcon"> Rehab Sabry
-                                    </a>
-                                </p>
-                            </div>
+                        <div class="col-md-2 col-sm-4 aboutFooterDiv">
+                            <img class=" rounded-circle aboutTeamImg" src="images/rsps.jpg" alt="">
+                            <p style="font-size: 12px;">
+                                <a class="" href="https://www.linkedin.com/in/rehab-sabry-08a864275/">
+                                    <img src="images/linkedinlogo.png" class="gitIcon"> Rehab Sabry
+                                </a>
+                            </p>
+                        </div>
 
-                            <div class="col-md-2 col-sm-4 aboutFooterDiv ">
-                                <img class=" rounded-circle aboutTeamImg" src="images/mnps.jpg" alt="">
-                                <p style="font-size: 12px;">
-                                    <a class="" href="https://www.linkedin.com/in/minanagib22/">
-                                        <img src="images/linkedinlogo.png" class="gitIcon "> Mina Naguib
-                                    </a>
-                                </p>
-                            </div>
+                        <div class="col-md-2 col-sm-4 aboutFooterDiv ">
+                            <img class=" rounded-circle aboutTeamImg" src="images/mnps.jpg" alt="">
+                            <p style="font-size: 12px;">
+                                <a class="" href="https://www.linkedin.com/in/minanagib22/">
+                                    <img src="images/linkedinlogo.png" class="gitIcon "> Mina Naguib
+                                </a>
+                            </p>
+                        </div>
 
-                            <div class="col-md-2 col-sm-4 aboutFooterDiv ">
-                                <img class=" rounded-circle aboutTeamImg" src="images/rrps.jpg" alt="">
-                                <p style="font-size: 12px;">
-                                    <a class="" href="https://www.linkedin.com/in/remonda-refat-679a0b223/"> 
-                                        <img src="images/linkedinlogo.png" class="gitIcon"> Remonda Refaat
-                                    </a>
-                                </p>
-                            </div>
+                        <div class="col-md-2 col-sm-4 aboutFooterDiv ">
+                            <img class=" rounded-circle aboutTeamImg" src="images/rrps.jpg" alt="">
+                            <p style="font-size: 12px;">
+                                <a class="" href="https://www.linkedin.com/in/remonda-refat-679a0b223/">
+                                    <img src="images/linkedinlogo.png" class="gitIcon"> Remonda Refaat
+                                </a>
+                            </p>
+                        </div>
 
-                            <div class="col-md-2 col-sm-4 aboutFooterDiv">
-                                <img class=" rounded-circle aboutTeamImg" src="images/seps.jpg" alt="">
-                                <p style="font-size: 12px;">
-                                    <a class="" href="https://www.linkedin.com/in/salma-e-856468138/"> 
-                                        <img src="images/linkedinlogo.png" class="gitIcon">Salma El Marhoumy
-                                    </a>
-                                </p>
-                            </div>
+                        <div class="col-md-2 col-sm-4 aboutFooterDiv">
+                            <img class=" rounded-circle aboutTeamImg" src="images/seps.jpg" alt="">
+                            <p style="font-size: 12px;">
+                                <a class="" href="https://www.linkedin.com/in/salma-e-856468138/">
+                                    <img src="images/linkedinlogo.png" class="gitIcon">Salma El Marhoumy
+                                </a>
+                            </p>
                         </div>
                     </div>
                 </div>
-                
             </div>
-            <div class="copyR">
-                <p class="copyrightParagraph">&copy; Candella inc All rights reserved</p>
-            </div>
-<!-- !End Footer -->
+
+        </div>
+        <div class="copyR">
+            <p class="copyrightParagraph">&copy; Candella inc All rights reserved</p>
+        </div>
+        <!-- !End Footer -->
 
 
-    <!-- TODO:-------------------JS Links------------------>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="js/checkOut.js"></script>
-    <script src="js/footer.js"></script>
-    <!-- TODO:-------------------END JS Links---------------- -->
+        <!-- TODO:-------------------JS Links------------------>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
+        <script>
+            function addDarkmodeWidget() {
+                const options = {
+                    bottom: '64px', // default: '32px'
+                    right: 'unset', // default: '32px'
+                    left: '25px', // default: 'unset'
+                    time: '0.5s', // default: '0.3s'
+                    mixColor: '#fff', // default: '#fff'
+                    backgroundColor: '#fff',  // default: '#fff'
+                    buttonColorDark: '#100f2c',  // default: '#100f2c'
+                    buttonColorLight: '#fff', // default: '#fff'
+                    saveInCookies: true, // default: true,
+                    label: '🌓', // default: ''
+                    autoMatchOsTheme: true // default: true
+                }
+                const darkmode = new Darkmode(options);
+                darkmode.showWidget();
+            }
+            window.addEventListener('load', addDarkmodeWidget);
+        </script>
+        <script src="js/checkOut.js"></script>
+        <script src="js/footer.js"></script>
+        <!-- TODO:-------------------END JS Links---------------- -->
 
 </body>
+
 </html>

@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Candella | Contact</title>
     <link rel="icon" type="image/x-icon" href="images/logo.svg">
-        <!-- TODO:-------------------START CSS Links----------------------->
+    <!-- TODO:-------------------START CSS Links----------------------->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/styles.css">
     <!-- TODO:-------------------END CSS Links------------------------ -->
 </head>
+
 <body>
     <!-- Contact Us Page -->
     <div class="container-fluid d-flex flex-wrap flex-column">
@@ -17,36 +19,63 @@
             <div class="contact-first-block col-md-7 d-flex flex-wrap justify-content-center align-items-center">
                 <img src="images/logo.svg" alt="Logo" class="contact-logo d-flex flex-column">
 
-        <form >
-            <div class="d-flex justify-content-between">
-                 <h1 class="mb-4 fs-5">Contact Us</h1>
-                 <p>Do you have account? <a class="redirect-anchor" href="login.html">Login</a></p>
-                </div>
-                <input type="text" class="form-control" id="contact-email"  placeholder="Email or Phone Number" required>
+                <form>
+                    <div class="d-flex justify-content-between">
+                        <h1 class="mb-4 fs-5">Contact Us</h1>
+                        <p>Do you have account? <a class="redirect-anchor" href="login.html">Login</a></p>
+                    </div>
+                    <input type="text" class="form-control" id="contact-email" placeholder="Email or Phone Number"
+                        required>
 
-                 <div class="col-auto">
-                    <div class="d-flex col-auto">
-                        <input type="text" class="form-control me-2" placeholder="First Name" aria-label="firstName" id="contact-fname" required>
-                        <input type="text" class="form-control" placeholder="Last Name" aria-label="lastName" id="contact-lname"  required >
+                    <div class="col-auto">
+                        <div class="d-flex col-auto">
+                            <input type="text" class="form-control me-2" placeholder="First Name" aria-label="firstName"
+                                id="contact-fname" required>
+                            <input type="text" class="form-control" placeholder="Last Name" aria-label="lastName"
+                                id="contact-lname" required>
+                        </div>
+                        <textarea class="form-control contact-textarea" id="contact-textarea"
+                            placeholder="Send us what you think about" required></textarea>
+                        <div class="centerbtn d-flex justify-content-center">
+                            <button type="submit" class="btn btn-primary contact-btn"
+                                onclick="submitForm()">Submit</button>
+                        </div>
                     </div>
-                    <textarea class="form-control contact-textarea" id="contact-textarea" placeholder="Send us what you think about" required></textarea>
-                    <div class="centerbtn d-flex justify-content-center">
-                        <button type="submit" class="btn btn-primary contact-btn" onclick="submitForm()">Submit</button>
-                    </div>
-                    </div>
-            
-        </form>
+
+                </form>
             </div>
             <div class="col-md-5">
-                <img  class="contact-image" src="images/contact.jpg" alt="Contact Image">
+                <img class="contact-image" src="images/contact.jpg" alt="Contact Image">
             </div>
         </div>
     </div>
     <!-- TODO:-------------------JS Links------------------>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <!-- <script src="js/main.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
+    <script>
+        function addDarkmodeWidget() {
+            const options = {
+                bottom: '64px', // default: '32px'
+                right: 'unset', // default: '32px'
+                left: '25px', // default: 'unset'
+                time: '0.5s', // default: '0.3s'
+                mixColor: '#fff', // default: '#fff'
+                backgroundColor: '#fff',  // default: '#fff'
+                buttonColorDark: '#100f2c',  // default: '#100f2c'
+                buttonColorLight: '#fff', // default: '#fff'
+                saveInCookies: true, // default: true,
+                label: '🌓', // default: ''
+                autoMatchOsTheme: true // default: true
+            }
+            const darkmode = new Darkmode(options);
+            darkmode.showWidget();
+        }
+        window.addEventListener('load', addDarkmodeWidget);
+    </script>
     <script src="js/contact.js"></script>
 
     <!-- TODO:-------------------END JS Links---------------- -->
 </body>
+
 </html>
