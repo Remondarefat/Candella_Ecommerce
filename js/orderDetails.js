@@ -14,6 +14,23 @@ let checkOutBtn =document.getElementById('checkOutBtn');
 let logoDisplay =document.getElementById('logoDisplay');
 let ItemsBody=document.getElementById('ItemsBody');
 let totalItemsPrice
+
+
+let isLog = localStorage.getItem("isLogin");
+  
+  let signupIcon = document.querySelector('#signupIcon');
+  let signoutIcon = document.querySelector('#signoutIcon');
+   if (isLog == "1"){
+    signupIcon.classList.add("hiddenIcon");
+    signoutIcon.classList.remove("hiddenIcon");
+   }
+   else{
+    signupIcon.classList.remove("hiddenIcon");
+    signoutIcon.classList.add("hiddenIcon");
+   }
+   signoutIcon.addEventListener("click",function(){
+    localStorage.setItem("isLogin","0");
+   })
 // ! display Order Details from Local Storage
 let users =JSON.parse(localStorage.getItem('Users'));
 let order =JSON.parse(localStorage.getItem('order'));
@@ -52,10 +69,20 @@ secPhoneInput.value='';
 BuildingDescriptionInput.value='';
 cityNameInput.value='';
 streetNameInput.value='';
+creditCardInfo.value="";
 if(paymentMethodInput.value=='CreditCard'){
     CardNumberInput.value='';
     CVVInput.value='' ;
 }
+localStorage.removeItem("order");
+localStorage.removeItem("checkout_cart");
+localStorage.removeItem("card_to_product");
+let cartCount = document.getElementById("cart-count");
+let products = JSON.parse(localStorage.getItem("card_to_product")) || [];
+let currentCount= products.length;
+    cartCount.innerText = currentCount;
+    $("#cart-count").hide(10);
+    
 }
 
 // ! function to display cart Items from Local storage 
@@ -98,3 +125,7 @@ document.getElementById('totalItemsPrice').innerHTML=`
 <p class="text-start mt-4 fw-bold text-danger d-flex justify-content-end fs-5 ">Total due : ${checkout_cart.totalCartPrice} $</p>
 `;
 
+let cartCount = document.getElementById("cart-count");
+let products = JSON.parse(localStorage.getItem("card_to_product")) || [];
+let currentCount= products.length;
+cartCount.innerText = currentCount;

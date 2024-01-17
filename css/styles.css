@@ -373,6 +373,24 @@ ul{
     animation-fill-mode: forwards;
     cursor: pointer;
 }
+#arrow-top{
+    color: var(--bt-bg-color);
+    position: absolute;
+    bottom: -15px;
+    animation: arr .5s infinite;
+    display: none;
+}
+@keyframes arr{
+    0%{
+        bottom: -15px;
+        transform: scale(1);
+    }
+    100%{
+        transform: scale(1.2);
+        bottom: -8px;;
+    }
+}
+
 
 #product-details .container div .add{
     border: 1px solid var(--bt-bg-color) !important;
@@ -439,7 +457,17 @@ ul{
     border-radius: 50%;
     color: white;
     position: absolute;
-    top: 16px;
+    top: 6px;
+    animation: car 1s infinite;
+    animation-timing-function: linear;
+}
+@keyframes car{
+    0%{
+        top:6px;
+    }
+    100%{
+        top: 16px;
+    }
 }
 /*------------------------------- End of Product Details style ------------------------------- */
 
@@ -656,6 +684,9 @@ margin: 0;
     transition: 0.4s all ease-out;
 }
 
+.hiddenIcon{
+    display: none;
+}
 
 /* !------------ End Check Out & Login Style------- */
 .navbar{

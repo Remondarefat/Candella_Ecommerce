@@ -1,9 +1,27 @@
+  //start code salma
 
 let img_slider = document.getElementsByClassName('img_slider');
 let step = 0;
 let nbr_img = img_slider.length;
 let prev = document.querySelector('.prev');
 let next = document.querySelector('.next');
+
+  let isLog = localStorage.getItem("isLogin");
+  
+  let signupIcon = document.querySelector('#signupIcon');
+  let signoutIcon = document.querySelector('#signoutIcon');
+   if (isLog == "1"){
+    signupIcon.classList.add("hiddenIcon");
+    signoutIcon.classList.remove("hiddenIcon");
+   }
+   else{
+    signupIcon.classList.remove("hiddenIcon");
+    signoutIcon.classList.add("hiddenIcon");
+   }
+   signoutIcon.addEventListener("click",function(){
+    localStorage.setItem("isLogin","0");
+   })
+   
 // moataz code
 
 let sectionoffset = $(".catogories").offset().top;
@@ -96,43 +114,53 @@ for (var i = 0; i < arr.length; i++) {
   }
       document.getElementById("rowData").innerHTML = container;
   let card = document.querySelectorAll(".pr_box");
-  console.log(card);
   $(".pr_box").on("click", function (e) {
-    let cat=e.target.nextElementSibling.querySelector(".product_category").innerHTML;
-      let sim_item_arr = [];
-      for (let i = 0; i < allItems.length; i++) {
-        if (allItems[i].category==cat) {
-          let im = allItems[i].thumbnail;
-          let ti = allItems[i].title;
-          let pri = allItems[i].price;
-          let des = allItems[i].description;
-          let sim_item_obj = {
-            img: im,
-            title: ti,
-            price: pri,
-            describtion:des
+    let islog = localStorage.getItem("isLogin");
+    if (islog == "1") {
+      let cat=e.target.nextElementSibling.querySelector(".product_category").innerHTML;
+        let sim_item_arr = [];
+        for (let i = 0; i < allItems.length; i++) {
+          if (allItems[i].category==cat) {
+            let im = allItems[i].thumbnail;
+            let ti = allItems[i].title;
+            let pri = allItems[i].price;
+            let des = allItems[i].description;
+            let sim_item_obj = {
+              img: im,
+              title: ti,
+              price: pri,
+              describtion:des
+            }
+            sim_item_arr.push(sim_item_obj); 
           }
-          sim_item_arr.push(sim_item_obj); 
-        }
+      }
+      localStorage.setItem("similer_item", JSON.stringify(sim_item_arr));
+        let img_src = e.target.querySelector(".product_box_img").getAttribute("src");
+        let title = e.target.querySelector(".title").innerHTML;
+        let describtion = e.target.querySelector(".describtion").innerHTML;
+        let product_salary = e.target.querySelector(".product_salary").innerHTML;
+        let final_sal = parseFloat(product_salary)
+        let obj = {
+          img: img_src,
+          tit: title,
+          desc: describtion,
+          sal: final_sal
+          
+      }
+      localStorage.setItem("product", JSON.stringify(obj))
+        location.assign("../productDetails.html");
     }
-    localStorage.setItem("similer_item", JSON.stringify(sim_item_arr));
-      let img_src = e.target.querySelector(".product_box_img").getAttribute("src");
-      let title = e.target.querySelector(".title").innerHTML;
-      let describtion = e.target.querySelector(".describtion").innerHTML;
-      let product_salary = e.target.querySelector(".product_salary").innerHTML;
-      let final_sal = parseFloat(product_salary)
-      let obj = {
-        img: img_src,
-        tit: title,
-        desc: describtion,
-        sal: final_sal
-        
+    else {
+      $("#arrow-top").show(1000);
+      
     }
-    localStorage.setItem("product", JSON.stringify(obj))
-      location.assign("../productDetails.html");
+    
+    
   })
 }
-
+$("#arrow-top").on("click", function (e) {
+  e.preventDefault();
+})
   // end moataz codee
   
     var links = document.querySelectorAll(".category");
@@ -174,4 +202,11 @@ function search(term) {
   }
   displayProduct(pro);
   
+}
+
+let cartCount = document.getElementById("cart-count");
+let products = JSON.parse(localStorage.getItem("card_to_product")) || [];
+let currentCount= products.length;
+if (currentCount > 0) {
+  cartCount.innerText = currentCount;
 }

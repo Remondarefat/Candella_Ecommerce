@@ -12,8 +12,23 @@ let CardNumberInput =document.getElementById('CardNumber');
 let CVVInput =document.getElementById('CVV');
 let checkOutValidation =document.getElementById('checkOutValidation');
 var orderInfo=[]; 
-let order={};
-// checkOutValidation.textContent="";
+let order = {};
+
+let isLog = localStorage.getItem("isLogin");
+  
+  let signupIcon = document.querySelector('#signupIcon');
+  let signoutIcon = document.querySelector('#signoutIcon');
+   if (isLog == "1"){
+    signupIcon.classList.add("hiddenIcon");
+    signoutIcon.classList.remove("hiddenIcon");
+   }
+   else{
+    signupIcon.classList.remove("hiddenIcon");
+    signoutIcon.classList.add("hiddenIcon");
+   }
+   signoutIcon.addEventListener("click",function(){
+    localStorage.setItem("isLogin","0");
+   })
 
 // !--- check Payment Method----
 for (var i = 0; i < paymentMethodInput.length; i++) {
@@ -28,7 +43,7 @@ for (var i = 0; i < paymentMethodInput.length; i++) {
         orderInfo.push(order);
         localStorage.setItem("order", JSON.stringify(orderInfo));
       }else{
-        $("#creditCardInfo").slideToggle();
+        $("#creditCardInfo").slideUp();
         order={
           payMentMethod:this.value,
         };
@@ -64,7 +79,6 @@ if(order.payMentMethod=='CreditCard'){
   if(!cityNameInput.value || !streetNameInput.value || !BuildingDescriptionInput.value || !secPhoneInput.value 
     || paymentMethodInput.value=='CreditCard' || !CardNumberInput.value || !CVVInput.value ){
       checkOutValidation.textContent="Please Fill All Required Inputs";
-      console.log("hhhhhh");
       return false;
   }
       location.assign('orderDetails.html');
@@ -88,3 +102,7 @@ if(order.payMentMethod=='CreditCard'){
 }
 
 
+let cartCount = document.getElementById("cart-count");
+let products = JSON.parse(localStorage.getItem("card_to_product")) || [];
+let currentCount= products.length;
+cartCount.innerText = currentCount;

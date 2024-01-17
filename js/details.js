@@ -10,6 +10,21 @@
     let similer_box = document.querySelector(".similer_box");
     let bt_more = document.querySelector(".bt-more");
     let cartCount = document.getElementById("cart-count");
+    let isLog = localStorage.getItem("isLogin");
+  
+  let signupIcon = document.querySelector('#signupIcon');
+  let signoutIcon = document.querySelector('#signoutIcon');
+   if (isLog == "1"){
+    signupIcon.classList.add("hiddenIcon");
+    signoutIcon.classList.remove("hiddenIcon");
+   }
+   else{
+    signupIcon.classList.remove("hiddenIcon");
+    signoutIcon.classList.add("hiddenIcon");
+   }
+   signoutIcon.addEventListener("click",function(){
+    localStorage.setItem("isLogin","0");
+   })
     
     let product_object = JSON.parse(localStorage.getItem("product"));
     imgPro.setAttribute("src",product_object.img)
@@ -127,13 +142,19 @@
     element.classList.remove("fa-cart-shopping");
     element.classList.add("fa-check");
     });
-
-    add.addEventListener('click', function() {
-         let products = JSON.parse(localStorage.getItem("card_to_product")) || [];
-        let currentCount = products.length;
+    
+    add.addEventListener('click', function () { 
+        let products = JSON.parse(localStorage.getItem("card_to_product")) || [];
+        let currentCount= products.length;
         cartCount.innerText = currentCount;
     });
     new WOW().init();
+    let products = JSON.parse(localStorage.getItem("card_to_product")) || [];
+    let currentCount = products.length;
+    if (currentCount > 0) {
+        cartCount.innerText = currentCount;
+    }
+    
 
  })();
 

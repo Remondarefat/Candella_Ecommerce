@@ -10,6 +10,21 @@ let itemImage = document.querySelector(".itemImage");
 let itemDesc = document.querySelector(".itemDesc");
 
 var numberOfItemElement = document.querySelector('.numberOfItem');
+let isLog = localStorage.getItem("isLogin");
+  
+  let signupIcon = document.querySelector('#signupIcon');
+  let signoutIcon = document.querySelector('#signoutIcon');
+   if (isLog == "1"){
+    signupIcon.classList.add("hiddenIcon");
+    signoutIcon.classList.remove("hiddenIcon");
+   }
+   else{
+    signupIcon.classList.remove("hiddenIcon");
+    signoutIcon.classList.add("hiddenIcon");
+   }
+   signoutIcon.addEventListener("click",function(){
+    localStorage.setItem("isLogin","0");
+   })
 
 
 // -----End of declaration ----------
@@ -130,7 +145,7 @@ function checkout() {
 
     localStorage.setItem("checkout_cart", JSON.stringify(checkoutData));
 
-    localStorage.removeItem("card_to_product");
+    // localStorage.removeItem("card_to_product");
     location.assign('checkOut.html')
 
     // alert("Checkout successful!");
