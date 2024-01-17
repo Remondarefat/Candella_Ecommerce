@@ -210,3 +210,14 @@ let currentCount= products.length;
 if (currentCount > 0) {
   cartCount.innerText = currentCount;
 }
+// !----- Loading Page -------
+$(document).ready(function(){
+  $("#loading .ring").fadeOut(1800 , function() {
+    $("#loading").fadeOut(1800, function(){
+      $("#loading").remove();
+      $("#homePage").css("overflow" , "auto");
+    })
+  });
+});
+
+

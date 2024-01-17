@@ -145,10 +145,8 @@ function checkout() {
 
     localStorage.setItem("checkout_cart", JSON.stringify(checkoutData));
 
-    // localStorage.removeItem("card_to_product");
     location.assign('checkOut.html')
 
-    // alert("Checkout successful!");
 }
 
 displayCartItems();

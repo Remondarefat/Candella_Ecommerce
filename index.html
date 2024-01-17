@@ -22,7 +22,16 @@
 
 </head>
 
-<body>
+<body id="homePage">
+    <!-- !------Loading Page-- -->
+    <div id="loading">
+        <div class="ring">
+            <img src="images/logo.svg">
+            Loading.....
+            <span></span>
+        </div>
+    </div>
+    <!-- !-------- -->
     <div class="container-fluid p-0">
     <nav class="navbar fixed-top navbar-expand-lg shadow  rounded">
         <div class="container-fluid d-flex align-items-center h-100 ">
@@ -241,27 +250,7 @@
 
     <!-- TODO:-------------------JS Links------------------>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
-    <script>
-        function addDarkmodeWidget() {
-            const options = {
-                bottom: '64px', // default: '32px'
-                right: 'unset', // default: '32px'
-                left: '25px', // default: 'unset'
-                time: '0.5s', // default: '0.3s'
-                mixColor: '#fff', // default: '#fff'
-                backgroundColor: '#fff',  // default: '#fff'
-                buttonColorDark: '#100f2c',  // default: '#100f2c'
-                buttonColorLight: '#fff', // default: '#fff'
-                saveInCookies: true, // default: true,
-                label: '🌓', // default: ''
-                autoMatchOsTheme: true // default: true
-            }
-            const darkmode = new Darkmode(options);
-            darkmode.showWidget();
-        }
-        window.addEventListener('load', addDarkmodeWidget);
-    </script>
+  
     <script src="js/main.js"></script>
     <script src="js/footer.js"></script>
     <!-- TODO:-------------------END JS Links---------------- -->

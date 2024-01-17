@@ -1,4 +1,5 @@
 /* ----------------------------------------- General-------------------------------------------------- */
+
 *{
     margin: 0;
     padding: 0;
@@ -15,6 +16,89 @@ html{
     --navbar-bg-color:#272727;
     --nav-tabs-bg-color:#E0E0E0;
 }
+/* !-----Loading Page------ */
+#loading{
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: fixed;
+    background-color: rgba(0, 0, 0, .7);
+    /* background-color: #272727; */
+    z-index: 99999999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #272727;
+    /* opacity: 0.5; */
+}
+#homePage {
+    overflow: hidden;
+}
+
+
+img{
+    width: 97%;
+}
+.ring
+{
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  width:150px;
+  height:150px;
+  background:transparent;
+  border:3px solid #3c3c3c;
+  border-radius:50%;
+  text-align:center;
+  line-height:150px;
+  font-family:sans-serif;
+  font-size:20px;
+  color:var(--main-color);
+  letter-spacing:4px;
+  text-transform:uppercase;
+  text-shadow:0 0 10px var(--main-color);
+  box-shadow:0 0 20px rgba(0,0,0,.5);
+}
+.ring:before
+{
+  content:'';
+  position:absolute;
+  top:-3px;
+  left:-3px;
+  width:100%;
+  height:100%;
+  border:3px solid transparent;
+  border-top:3px solid var(--main-color);
+  border-right:3px solid var(--main-color);
+  border-radius:50%;
+  animation:animateC 2s linear infinite;
+}
+
+@keyframes animateC
+{
+  0%
+  {
+    transform:rotate(0deg);
+  }
+  100%
+  {
+    transform:rotate(360deg);
+  }
+}
+@keyframes animate
+{
+  0%
+  {
+    transform:rotate(45deg);
+  }
+  100%
+  {
+    transform:rotate(405deg);
+  }
+}
+/* !-----Loading Page------ */
 /*------------------------------------- Slider -------------------------------------------------- */
 .slider {
     height: 100vh;
