@@ -1,242 +1,282 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Candella | Order Details</title>
     <link rel="icon" type="image/x-icon" href="images/logo.svg">
-        <!-- TODO:-------------------START CSS Links----------------------->
+    <!-- TODO:-------------------START CSS Links----------------------->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
     <link rel="stylesheet" href="css/all.min.css">
     <link rel="stylesheet" href="css/styles.css">
     <!-- TODO:-------------------END CSS Links------------------------ -->
     <!-- TODO:-------------------Start jQuery Links------------------------ -->
-    <script src="js/jquery.min.js"></script>      
+    <script src="js/jquery.min.js"></script>
     <!-- TODO:-------------------END jQuery Links------------------------ -->
 </head>
+
 <body>
-<!--! Navbar---- -->
-<div class="container-fluid p-0">
-    <nav class="navbar  navbar-expand-lg shadow bg-body-tertiary rounded mb-5">
-        <div class="container-fluid d-flex align-items-center h-100 ">
-            <a class="navbar-brand d-flex justify-content-center align-items-center ms-5" href="index.html">
-                <img src="images/logo.svg" class="logo" alt="logo">
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse rounded-5 pt-2 toggle-menu" id="navbarSupportedContent">
-                <ul class="navbar-nav ms-auto d-flex align-items-center ms-auto ">
-                    <!-- <li>
+    <!--! Navbar---- -->
+    <div class="container-fluid p-0">
+        <nav class="navbar  navbar-expand-lg shadow bg-body-tertiary rounded mb-5">
+            <div class="container-fluid d-flex align-items-center h-100 ">
+                <a class="navbar-brand d-flex justify-content-center align-items-center ms-5" href="index.html">
+                    <img src="images/logo.svg" class="logo" alt="logo">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse rounded-5 pt-2 toggle-menu" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto d-flex align-items-center ms-auto ">
+                        <!-- <li>
                         <form class="search-form" role="search">
                             <input class="form-control-search mx-auto " type="search" placeholder="Search"
                                 aria-label="Search">
                             <i class="fa-solid fa-magnifying-glass search-sign"></i>
                         </form>
                     </li> -->
-                    <li class="nav-item">
-                        <a class="nav-link" href="signup.html"><i class="fa-solid fa-user"></i></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link d-none" href="#"><i class="fa-solid fa-right-from-bracket"></i></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
-                    </li>
-                </ul>
+                        <li class="nav-item">
+                            <a class="nav-link" href="signup.html"><i class="fa-solid fa-user"></i></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link d-none" href="#"><i class="fa-solid fa-right-from-bracket"></i></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+                
+        </nav>
+        <!-- !-----Items Info----- -->
+        <div class="container  ">
+            <div class="text-center">
+                <a class="toShop d-inline-block  " href="index.html">Back to shopping</a>
+            </div>
+            <div id="ItemsBody">
 
             </div>
+            <div id="totalItemsPrice">
+
+            </div>
+
+            <hr>
         </div>
-    </nav>
-<!-- !-----Items Info----- -->
-<div class="container  ">
-    <div class="text-center">
-        <a class="toShop d-inline-block  " href="index.html">Back to shopping</a>
-    </div>
-    <div id="ItemsBody">
 
-    </div>
-    <div id="totalItemsPrice">
+        <!-- !-----End Items Info- -->
 
-    </div>
-
-        <hr>
-</div>
-
-<!-- !-----End Items Info- -->
-
-<!-- !-----Order Info----- -->
-    <section id="orderConfirm">
-        <div class="container">
-            <div class="orderConfirmInfo">
-                <div class="row ">
-                    <div class="col-md-5 ">
-                        <!-- ! ----->
-                        <div class="row mt-2 gx-2">
-                            <div class="col-md-6">
-                                <input class=" form-control" id="fname" type="text" name="fname" placeholder="fname" readonly required>
-                            </div>
-                            <div class="col-md-6">
-                                <input class="  form-control" id="lname" type="text" name="lname" placeholder="lname"readonly required>                                        </div>
-                        </div>
-                        <div class="row mt-2">
-                            <div class="col">
-                                <input class="  form-control" id="userEmail" type="email" name="userEmail" placeholder="Email" readonly required>                                        
-                            </div>
-                        </div>
-                        <div class="row mt-2">
-                            <div class="col">
-                                <input class="  form-control" id="phoneNumber" type="text" name="phoneNumber" placeholder="phoneNumber" readonly required>                                        
-                            </div>
-                        </div>
-                        <div class="row mt-2">
-                            <div class="col">
-                                <input class="  form-control" id="secPhoneNumber" type="text" name="secPhoneNumber" placeholder="secondary phone number" readonly required>                                        
-                            </div>
-                        </div>
-                        <div class="row mt-2">
-                            <div class="col">
-                                <input class="  form-control" id="BuildingDescription" type="text" name="BuildingDescription" placeholder="Building Description" readonly required>                                        
-                            </div>
-                        </div>
-                        <div class="row mt-2 gx-2">
-                            <div class="col-md-6">
-                                <input class=" form-control" id="cityName" type="text" name="city" placeholder="city" readonly required>
-                            </div>
-                            <div class="col-md-6">
-                                <input class="  form-control" id="streetName" type="text" name="street" placeholder="Street" readonly required>                                        </div>
-                        </div>
-                
-                        <div class="row mt-2">
-                            <div class="col-md-6">
-                                <input class="  form-control" id="paymentmethod" type="text" name="payment_method" placeholder="paymentmethod" readonly required>                                        
-                            </div>
-                        </div>
-                        <div id="creditCardInfo" class="d-none">
-                            <div class="row mt-3">
+        <!-- !-----Order Info----- -->
+        <section id="orderConfirm">
+            <div class="container">
+                <div class="orderConfirmInfo">
+                    <div class="row ">
+                        <div class="col-md-5 ">
+                            <!-- ! ----->
+                            <div class="row mt-2 gx-2">
                                 <div class="col-md-6">
-                                    <input id="CardNumber" class=" form-control" type="text" placeholder="CardNumber" readonly >
+                                    <input class=" form-control" id="fname" type="text" name="fname" placeholder="fname"
+                                        readonly required>
+                                </div>
+                                <div class="col-md-6">
+                                    <input class="  form-control" id="lname" type="text" name="lname"
+                                        placeholder="lname" readonly required>
                                 </div>
                             </div>
                             <div class="row mt-2">
-                                <div class="col-md-6">
-                                    <input id="CVV" class="form-control" type="text" placeholder="CVV" readonly>
+                                <div class="col">
+                                    <input class="  form-control" id="userEmail" type="email" name="userEmail"
+                                        placeholder="Email" readonly required>
                                 </div>
                             </div>
+                            <div class="row mt-2">
+                                <div class="col">
+                                    <input class="  form-control" id="phoneNumber" type="text" name="phoneNumber"
+                                        placeholder="phoneNumber" readonly required>
+                                </div>
+                            </div>
+                            <div class="row mt-2">
+                                <div class="col">
+                                    <input class="  form-control" id="secPhoneNumber" type="text" name="secPhoneNumber"
+                                        placeholder="secondary phone number" readonly required>
+                                </div>
+                            </div>
+                            <div class="row mt-2">
+                                <div class="col">
+                                    <input class="  form-control" id="BuildingDescription" type="text"
+                                        name="BuildingDescription" placeholder="Building Description" readonly required>
+                                </div>
+                            </div>
+                            <div class="row mt-2 gx-2">
+                                <div class="col-md-6">
+                                    <input class=" form-control" id="cityName" type="text" name="city"
+                                        placeholder="city" readonly required>
+                                </div>
+                                <div class="col-md-6">
+                                    <input class="  form-control" id="streetName" type="text" name="street"
+                                        placeholder="Street" readonly required>
+                                </div>
+                            </div>
+
+                            <div class="row mt-2">
+                                <div class="col-md-6">
+                                    <input class="  form-control" id="paymentmethod" type="text" name="payment_method"
+                                        placeholder="paymentmethod" readonly required>
+                                </div>
+                            </div>
+                            <div id="creditCardInfo" class="d-none">
+                                <div class="row mt-3">
+                                    <div class="col-md-6">
+                                        <input id="CardNumber" class=" form-control" type="text"
+                                            placeholder="CardNumber" readonly>
+                                    </div>
+                                </div>
+                                <div class="row mt-2">
+                                    <div class="col-md-6">
+                                        <input id="CVV" class="form-control" type="text" placeholder="CVV" readonly>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="text-center" id="checkOutBtn">
+                                <button href="#"
+                                    class=" btn-1  py-2 px-6 d-inline-block mt-4 text-decoration-none  rounded-2">Check
+                                    Out</button>
+                            </div>
+                            <!--! --- -->
                         </div>
-                        <div class="text-center" id="checkOutBtn">
-                            <button href="#" class=" btn-1  py-2 px-6 d-inline-block mt-4 text-decoration-none  rounded-2">Check Out</button>
-                        </div>
-                        <!--! --- -->
-                    </div>
-                    <div class=" text-center col-md-4 offset-3 d-flex justify-content-center align-items-center " >
-                        <div class=" d-none mt-5" id="logoDisplay" >
-                            <img src="images/CheckCircle.svg" class="w-50 mb-2">
-                            <p class=" fs-3 ">Order Confirmed</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        
-    </section>
-</div>
-
-        <!-- --------------------Footer-------------------- -->
-        <div class="footer mt-5">
-            <div class="footerSec1">
-                <img class="separator" src="images/line-1.svg" />
-                <div class="logoSection"> 
-                    <div class="logoSec">
-                        <img src="images/logo_b&w .svg" class="logoFooter">
-                        <p class="logoDesc">Candella &copy;.</p>
-                    </div>
-                    <div class="contactAboutSection">
-                        <a class="aboutFooter rounded-top-5" href="#" target="_parent" >About Us</a>
-                        <a class="contactFooter" href="contact.html">Contact Us</a>
-                    </div>
-                </div>
-            </div>
-            <div  class="aboutDiv">
-                <div class="aboutParagraph">
-                    <h5 class=" mb-5">Candella is a FrontEnd E-commerce Project.</h5>
-                    <h5>GitHub Repo :</h5>
-                    <a href="https://github.com/Remondarefat/JavaScript_Project.git ">
-                        https://github.com/Remondarefat/JavaScript_Project.git 
-                    </a>
-                    <h5 class="mt-5">Our Team:</h5>
-
-                    <div class="container">
-                        <div class="row justify-content-center align-items-center">
-
-                            <div class="col-md-2 col-sm-4 aboutFooterDiv">
-                                <img class=" rounded-circle aboutTeamImg" src="images/msps.jpeg" alt="">
-                                <p style="font-size: 12px; " class="">
-                                    <a class="" href="https://www.linkedin.com/in/marwan-salem-442b96151/"> 
-                                        <img src="images/linkedinlogo.png" class="gitIcon"> Marwan Salem
-                                    </a></p>
-                            </div>
-
-                            <div class="col-md-2 col-sm-4 aboutFooterDiv">
-                                <img class=" rounded-circle aboutTeamImg" src="images/mgps.jpg" alt="">
-                                <p style="font-size: 12px;">
-                                    <a class="" href="https://www.linkedin.com/in/moataz-gamal-293146217/"> 
-                                        <img src="images/linkedinlogo.png" class="gitIcon "> Moataz Gamal 
-                                    </a>
-                                </p>
-                            </div>
-
-                            <div class="col-md-2 col-sm-4 aboutFooterDiv">
-                                <img class=" rounded-circle aboutTeamImg" src="images/rsps.jpg" alt="">
-                                <p style="font-size: 12px;">
-                                    <a class="" href="https://www.linkedin.com/in/rehab-sabry-08a864275/"> 
-                                        <img src="images/linkedinlogo.png" class="gitIcon"> Rehab Sabry
-                                    </a>
-                                </p>
-                            </div>
-
-                            <div class="col-md-2 col-sm-4 aboutFooterDiv ">
-                                <img class=" rounded-circle aboutTeamImg" src="images/mnps.jpg" alt="">
-                                <p style="font-size: 12px;">
-                                    <a class="" href="https://www.linkedin.com/in/minanagib22/">
-                                        <img src="images/linkedinlogo.png" class="gitIcon "> Mina Naguib
-                                    </a>
-                                </p>
-                            </div>
-
-                            <div class="col-md-2 col-sm-4 aboutFooterDiv ">
-                                <img class=" rounded-circle aboutTeamImg" src="images/rrps.jpg" alt="">
-                                <p style="font-size: 12px;">
-                                    <a class="" href="https://www.linkedin.com/in/remonda-refat-679a0b223/"> 
-                                        <img src="images/linkedinlogo.png" class="gitIcon"> Remonda Refaat
-                                    </a>
-                                </p>
-                            </div>
-
-                            <div class="col-md-2 col-sm-4 aboutFooterDiv">
-                                <img class=" rounded-circle aboutTeamImg" src="images/seps.jpg" alt="">
-                                <p style="font-size: 12px;">
-                                    <a class="" href="https://www.linkedin.com/in/salma-e-856468138/"> 
-                                        <img src="images/linkedinlogo.png" class="gitIcon">Salma El Marhoumy
-                                    </a>
-                                </p>
+                        <div class=" text-center col-md-4 offset-3 d-flex justify-content-center align-items-center ">
+                            <div class=" d-none mt-5" id="logoDisplay">
+                                <img src="images/CheckCircle.svg" class="w-50 mb-2">
+                                <p class=" fs-3 ">Order Confirmed</p>
                             </div>
                         </div>
                     </div>
                 </div>
-                
-            </div>
-            <div class="copyR">
-                <p class="copyrightParagraph">&copy; Candella inc All rights reserved</p>
-            </div>
-<!-- ! End Footer -->
 
-    <!-- TODO:-------------------JS Links------------------>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="js/orderDetails.js"></script>
-    <script src="js/footer.js"></script>
-    <!-- TODO:-------------------END JS Links---------------- -->
+        </section>
+    </div>
+
+    <!-- --------------------Footer-------------------- -->
+    <div class="footer mt-5">
+        <div class="footerSec1">
+            <img class="separator" src="images/line-1.svg" />
+            <div class="logoSection">
+                <div class="logoSec">
+                    <img src="images/logo_b&w .svg" class="logoFooter">
+                    <p class="logoDesc">Candella &copy;.</p>
+                </div>
+                <div class="contactAboutSection">
+                    <a class="aboutFooter rounded-top-5" href="#" target="_parent">About Us</a>
+                    <a class="contactFooter" href="contact.html">Contact Us</a>
+                </div>
+            </div>
+        </div>
+        <div class="aboutDiv">
+            <div class="aboutParagraph">
+                <h5 class=" mb-5">Candella is a FrontEnd E-commerce Project.</h5>
+                <h5>GitHub Repo :</h5>
+                <a href="https://github.com/Remondarefat/JavaScript_Project.git ">
+                    https://github.com/Remondarefat/JavaScript_Project.git
+                </a>
+                <h5 class="mt-5">Our Team:</h5>
+
+                <div class="container">
+                    <div class="row justify-content-center align-items-center">
+
+                        <div class="col-md-2 col-sm-4 aboutFooterDiv">
+                            <img class=" rounded-circle aboutTeamImg" src="images/msps.jpeg" alt="">
+                            <p style="font-size: 12px; " class="">
+                                <a class="" href="https://www.linkedin.com/in/marwan-salem-442b96151/">
+                                    <img src="images/linkedinlogo.png" class="gitIcon"> Marwan Salem
+                                </a>
+                            </p>
+                        </div>
+
+                        <div class="col-md-2 col-sm-4 aboutFooterDiv">
+                            <img class=" rounded-circle aboutTeamImg" src="images/mgps.jpg" alt="">
+                            <p style="font-size: 12px;">
+                                <a class="" href="https://www.linkedin.com/in/moataz-gamal-293146217/">
+                                    <img src="images/linkedinlogo.png" class="gitIcon "> Moataz Gamal
+                                </a>
+                            </p>
+                        </div>
+
+                        <div class="col-md-2 col-sm-4 aboutFooterDiv">
+                            <img class=" rounded-circle aboutTeamImg" src="images/rsps.jpg" alt="">
+                            <p style="font-size: 12px;">
+                                <a class="" href="https://www.linkedin.com/in/rehab-sabry-08a864275/">
+                                    <img src="images/linkedinlogo.png" class="gitIcon"> Rehab Sabry
+                                </a>
+                            </p>
+                        </div>
+
+                        <div class="col-md-2 col-sm-4 aboutFooterDiv ">
+                            <img class=" rounded-circle aboutTeamImg" src="images/mnps.jpg" alt="">
+                            <p style="font-size: 12px;">
+                                <a class="" href="https://www.linkedin.com/in/minanagib22/">
+                                    <img src="images/linkedinlogo.png" class="gitIcon "> Mina Naguib
+                                </a>
+                            </p>
+                        </div>
+
+                        <div class="col-md-2 col-sm-4 aboutFooterDiv ">
+                            <img class=" rounded-circle aboutTeamImg" src="images/rrps.jpg" alt="">
+                            <p style="font-size: 12px;">
+                                <a class="" href="https://www.linkedin.com/in/remonda-refat-679a0b223/">
+                                    <img src="images/linkedinlogo.png" class="gitIcon"> Remonda Refaat
+                                </a>
+                            </p>
+                        </div>
+
+                        <div class="col-md-2 col-sm-4 aboutFooterDiv">
+                            <img class=" rounded-circle aboutTeamImg" src="images/seps.jpg" alt="">
+                            <p style="font-size: 12px;">
+                                <a class="" href="https://www.linkedin.com/in/salma-e-856468138/">
+                                    <img src="images/linkedinlogo.png" class="gitIcon">Salma El Marhoumy
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="copyR">
+            <p class="copyrightParagraph">&copy; Candella inc All rights reserved</p>
+        </div>
+        <!-- ! End Footer -->
+
+        <!-- TODO:-------------------JS Links------------------>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
+        <script>
+            function addDarkmodeWidget() {
+                const options = {
+                    bottom: '64px', // default: '32px'
+                    right: 'unset', // default: '32px'
+                    left: '25px', // default: 'unset'
+                    time: '0.5s', // default: '0.3s'
+                    mixColor: '#fff', // default: '#fff'
+                    backgroundColor: '#fff',  // default: '#fff'
+                    buttonColorDark: '#100f2c',  // default: '#100f2c'
+                    buttonColorLight: '#fff', // default: '#fff'
+                    saveInCookies: true, // default: true,
+                    label: '🌓', // default: ''
+                    autoMatchOsTheme: true // default: true
+                }
+                const darkmode = new Darkmode(options);
+                darkmode.showWidget();
+            }
+            window.addEventListener('load', addDarkmodeWidget);
+        </script>
+        <script src="js/orderDetails.js"></script>
+        <script src="js/footer.js"></script>
+        <!-- TODO:-------------------END JS Links---------------- -->
 </body>
+
 </html>
