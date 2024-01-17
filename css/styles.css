@@ -105,13 +105,12 @@ img{
     position: relative;
     margin-top: 75px;
     overflow: hidden;
-    display: flex;
-    transition: transform 0.5s ease-in-out;
+    
 }
 
 .slider img {
     object-fit: cover;
-    height: auto;
+    height: 100%;
     width: 100%;
     position: absolute;
     top: 0;
@@ -150,12 +149,7 @@ img{
     width: 100%;
     height: auto;
 }
-@media screen and (max-width: 600px) {
-    .img_slider {
-        width: 100%; 
-        height: auto; 
-    }
-}
+
 .container-fluid {
     margin-right: 0;
     margin-left: 0;
