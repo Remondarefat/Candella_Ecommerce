@@ -14,8 +14,44 @@ html{
     --second-color:#EDCBA6;
     --bt-bg-color:#B08A42;
     --navbar-bg-color:#272727;
-    --nav-tabs-bg-color:#E0E0E0;
+    --nav-tabs-bg-color:#E0E0E0; 
+    --body-bg:rgb(248,249,250);
+    --hoverColor:#E0E0E0;
+    --arrowColor:#272727;
 }
+.dark-theme{
+    /* --text-color:#black; */
+    --main-color: #333;
+    --second-color: #222;
+    --bt-bg-color:#B08A42;
+    --navbar-bg-color: #333;
+    --nav-tabs-bg-color: #444;
+    --text-color:#ffff;
+    --body-bg:#272727 ;
+    --icon-color:#ffff;
+    --inputs-color:#6c6c6c;
+    --input-hoverColor:#abaaaa;
+    --hoverColor:#ffff;
+    --cartColor:#c1c1c1;
+    --arrowColor:#ffff;
+}
+body{
+    background-color:var(--body-bg) ;
+    color:var(--text-color);
+
+}
+input[type='text'],input[type='password'],input[type='email'],
+input[type='number'],textarea{
+    background-color:var(--cartColor) !important ;
+}
+input[type='text']:focus,input[type='password']:focus,
+input[type='email']:focus,input[type='number']:focus,textarea:focus{
+    background-color:var(--input-hoverColor) !important ;
+}
+.card{
+    background-color:var(--cartColor) ;
+}
+
 /* !-----Loading Page------ */
 #loading{
     top: 0;
@@ -99,6 +135,13 @@ img{
   }
 }
 /* !-----Loading Page------ */
+/* !-----Dark Mode Style--- */
+#dark_Icon{
+    width: 30px;
+    cursor: pointer;
+    margin-left: 15px;
+}
+/* !-----Dark Mode Style--- */
 /*------------------------------------- Slider -------------------------------------------------- */
 .slider {
     height: 100vh;
@@ -157,6 +200,13 @@ img{
 /* ----------------------------------End of slider -------------------------------------------------*/
 
 /*----------------------- Nav bar and Home page products ------------------------------------ */
+/* .navbar{
+    background-color: var(--body-bg) !important;  
+} */
+
+.fa-solid, .fas{
+    color:var(--icon-color)
+}
 .logo{
     width:40px;
 }
@@ -217,7 +267,7 @@ ul{
     cursor: pointer;
 }
 .catogories li a {
-    color: #000;
+    color: var(--text-color);
     border: none !important; 
 }
 .catogories li:hover a{
@@ -346,7 +396,8 @@ ul{
     color: var(--bt-bg-color);
 }
   #signup-heading, .redirect-anchor:hover{
-    color: var(--navbar-bg-color);
+    /* color: var(--navbar-bg-color); */
+    color: var(--text-color);
 }
 .signup-btn {
     padding: 6px 25px;
@@ -416,6 +467,12 @@ ul{
 }
 .addition-item{
     display: none;
+}
+.color-mode{
+    background-color: var(--body-bg);
+}
+.bg-mode{
+    background-color: var(--text-color);
 }
 .pr_box{
     position: relative;
@@ -556,7 +613,7 @@ ul{
 /*------------------------------- End of Product Details style ------------------------------- */
 
 
-/*      ------------------------------- Footer -----------------------------------                  */
+/* !     ------------------------------- Footer -----------------------------------                  */
 
 .footer {
     position: relative;
@@ -631,7 +688,7 @@ ul{
     
     .aboutFooter:hover,
     .contactFooter:hover {
-    color: var(--nav-tabs-bg-color);
+    color: var(--hoverColor);
 }
     
     .copyrightParagraph{
@@ -685,10 +742,10 @@ ul{
         background-color: var(--navbar-bg-color);
     }
     .minusItem:hover {
-        color:var(--navbar-bg-color);
+        color:var(--arrowColor);
     }
     .plusItem:hover{
-        color:var(--navbar-bg-color);
+        color:var(--arrowColor);
 
     }
 
@@ -707,7 +764,7 @@ ul{
         min-height: 51vh;
     }
     
-    /*      ------------------------------- End of Footer -----------------------------------                  */
+    /*!      ------------------------------- End of Footer -----------------------------------                  */
     
 /* !-------------------------- Start Check Out & Login Style---------------------------- */
 /* ? Start Check Out Style */
@@ -774,6 +831,6 @@ margin: 0;
 
 /* !------------ End Check Out & Login Style------- */
 .navbar{
-    background-color: rgb(248,249,250);
+    background-color: var(--body-bg) ;
     transition: background-color 1s;
 }

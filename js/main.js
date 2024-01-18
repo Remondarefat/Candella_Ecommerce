@@ -31,7 +31,7 @@ $(window).scroll(function () {
     $(".navbar").css('backgroundColor', 'rgba(0, 0, 0, .2)');
   }
   else {
-    $(".navbar").css('backgroundColor', 'rgb(248,249,250)');
+    $(".navbar").css('backgroundColor', 'var(--body-bg)');
   }
 })
 
@@ -219,5 +219,6 @@ $(document).ready(function(){
     })
   });
 });
+// !----- Loading Page -------
 
 
