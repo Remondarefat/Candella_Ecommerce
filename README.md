@@ -9,7 +9,7 @@ This is a sample application that demonstrates an E-commerce website using Front
 * Rehab Sabry
 * Remonda Refaat
 * Mina Naguib
-* Salma El Marhoumy
+* Salma El Marhoumi
 
 
 ## Live Demonstration

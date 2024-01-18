@@ -70,6 +70,8 @@ function signup() {
     users.push(user);
     localStorage.setItem("Users", JSON.stringify(users));
     localStorage.setItem("isLogin","1");
+    localStorage.removeItem("card_to_product");
+    localStorage.removeItem("checkout_cart");
     window.history.pushState({}, "", "../index.html");
 
 

@@ -21,6 +21,8 @@ function checkInput() {
     if (passwordInput.value == usersContainer[i].password &&
       emailInput.value == usersContainer[i].email){
         location.assign('index.html');
+        localStorage.removeItem("card_to_product");
+        localStorage.removeItem("checkout_cart");
         localStorage.setItem("isLogin","1");
         break;
       }
