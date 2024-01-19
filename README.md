@@ -1,3 +1,5 @@
+https://github.com/Remondarefat/Candella_Ecommerce/assets/49076591/d8c02f01-72a5-47c4-ae80-59216553d681
+
 # E-commerce Candella
 
 This is a sample application that demonstrates an E-commerce website using FrontEnd technologies that we've learned through our intensive code camp. 
